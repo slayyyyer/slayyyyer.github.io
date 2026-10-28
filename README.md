@@ -1,7 +1,8 @@
 # slayyyyer.github.io
 
 A single-page personal site: a bright, layered “Aqua” desktop with scroll and pointer parallax.
-Plain HTML, CSS and a small vanilla script — no dependencies, no build step, no image files.
+Plain HTML, CSS and a small vanilla script — no dependencies and no build step. The only image
+is `og.png`, the 1200×630 social preview card.
 
 ## Preview locally
 
@@ -68,6 +69,7 @@ Notes:
 | Colours, glass, type, layout | `assets/site.css` (`:root` holds the palette) |
 | Parallax speeds | `data-speed` / `data-mouse` attributes in `index.html` |
 | Parallax and scroll-cue behaviour | `assets/site.js` |
+| Share card | `og.png` (1200×630, referenced from the `og:image` / `twitter:image` tags) |
 
 The contact address appears in the About spec sheet and the contact section. Search for
 `jbakerdev199@gmail.com` to change it everywhere.
