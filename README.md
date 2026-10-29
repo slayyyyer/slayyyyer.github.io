@@ -46,6 +46,9 @@ Notes:
 - On GitHub Free, Pages for a user site needs the repository to be public.
 - A root site coexists with project sites: a repo like `saf-explorer` can still publish at
   `https://slayyyyer.github.io/saf-explorer/`.
+- `tornado/` is a standalone WebGL experiment (three.js r128 from cdnjs) served at
+  `https://slayyyyer.github.io/tornado/`. It is unlinked from the personal page and is not
+  part of the design system.
 - Keep asset paths relative (as they are now) so the page also works from the filesystem
   and from any subpath.
 - No `.nojekyll` is needed: there are no underscore-prefixed folders here.
