@@ -66,6 +66,7 @@ Notes:
 | What | Where |
 | --- | --- |
 | Copy, sections, links, email | `index.html` |
+| Project cards (the `#projects` section) | `index.html`, styled by `.projectcard` in `assets/site.css` |
 | Colours, glass, type, layout | `assets/site.css` (`:root` holds the palette) |
 | Parallax speeds | `data-speed` / `data-mouse` attributes in `index.html` |
 | Parallax and scroll-cue behaviour | `assets/site.js` |
@@ -73,3 +74,19 @@ Notes:
 
 The contact address appears in the About spec sheet and the contact section. Search for
 `jbakerdev199@gmail.com` to change it everywhere.
+
+## Subprojects
+
+The `#projects` section links the sibling project sites on this domain:
+
+| Card | URL |
+| --- | --- |
+| JErlang | <https://slayyyyer.github.io/jerlang/> |
+| Yahtzee | <https://slayyyyer.github.io/yahtzee/> |
+| Blackjack Lab | <https://slayyyyer.github.io/blackjack/> |
+| Murmur | <https://slayyyyer.github.io/murmur/> |
+| MotoBuzz | <https://slayyyyer.github.io/motobuzz/> |
+
+Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`, so adding a
+project means adding one `<a class="projectcard">` block and one row here. The featured card uses
+`projectcard--wide` to span both columns and sits first; the rest flow two-up.

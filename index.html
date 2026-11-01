@@ -53,7 +53,8 @@
         <span>Justin Baker</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#expertise">Expertise</a>
+        <a class="nav__sm-hide" href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -268,8 +269,73 @@
     </div>
   </section>
 
+  <section class="projects shell" id="projects">
+    <div class="sectionhead">
+      <div>
+        <p class="label">03 / Projects</p>
+        <h2>Things I built for the fun of it.</h2>
+      </div>
+      <p class="sectionhead__sub">Five live experiments, each its own repository and its own
+        subpath on this domain.</p>
+    </div>
+
+    <div class="projectgrid">
+
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/jerlang/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/jerlang/</p>
+        <h3>An Erlang runtime for the JVM</h3>
+        <p class="projectcard__copy">Reads the BEAM files the Erlang compiler produces and
+          interprets them on the JVM — processes, message passing, links, monitors and
+          distribution written in Java, one reflective call away from Java code. OTP’s own
+          gen_server and supervisor run unmodified, and the artifact is published on Maven
+          Central.</p>
+        <ul class="stack"><li>Java 21</li><li>BEAM</li><li>OTP 29</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/yahtzee/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/yahtzee/</p>
+        <h3>Exact-probability Yahtzee</h3>
+        <p class="projectcard__copy">Play against a CPU that solves every roll with exact
+          probabilities and keeps an exact table for the rest of the game, endgame included.</p>
+        <ul class="stack"><li>Game</li><li>Exact EV</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/blackjack/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/blackjack/</p>
+        <h3>Blackjack Lab</h3>
+        <p class="projectcard__copy">An exact solver and the lab around it: a strategy chart
+          that re-derives itself whenever a rule changes, plus card counting and a simulation
+          target to prove the number.</p>
+        <ul class="stack"><li>Solver</li><li>Simulation</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/murmur/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/murmur/</p>
+        <h3>Murmur</h3>
+        <p class="projectcard__copy">A small animated face in Charlotte that reacts to weather,
+          air quality, official alerts, river levels and earthquakes. A simulated mood, not a
+          real one.</p>
+        <ul class="stack"><li>Live feeds</li><li>Character</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/motobuzz/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/motobuzz/</p>
+        <h3>MotoBuzz</h3>
+        <p class="projectcard__copy">Reads public motocross news, subreddits and rider and brand
+          channels once an hour, then ranks what the sport is actually talking about.</p>
+        <ul class="stack"><li>Ranking</li><li>Hourly</li></ul>
+      </a>
+
+    </div>
+  </section>
+
   <section class="contact shell" id="contact">
-    <p class="label">03 / Contact</p>
+    <p class="label">04 / Contact</p>
     <h2>Let’s make something solid.</h2>
     <p class="contact__copy">If you are building something that has to last, I would like to hear
       about it. Email is best; GitHub is a good place to see what I am tinkering with.</p>
@@ -288,6 +354,7 @@
       <p class="footer__brand">Justin Baker · Charlotte, NC</p>
       <nav class="footer__links" aria-label="Footer">
         <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="https://github.com/slayyyyer" target="_blank" rel="noopener">GitHub</a>
