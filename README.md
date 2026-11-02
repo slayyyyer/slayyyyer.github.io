@@ -82,11 +82,13 @@ The `#projects` section links the sibling project sites on this domain:
 | Card | URL |
 | --- | --- |
 | JErlang | <https://slayyyyer.github.io/jerlang/> |
+| The Charlotte Almanac | <https://slayyyyer.github.io/clt-almanac/> |
 | Yahtzee | <https://slayyyyer.github.io/yahtzee/> |
 | Blackjack Lab | <https://slayyyyer.github.io/blackjack/> |
 | Murmur | <https://slayyyyer.github.io/murmur/> |
 | MotoBuzz | <https://slayyyyer.github.io/motobuzz/> |
 
 Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`, so adding a
-project means adding one `<a class="projectcard">` block and one row here. The featured card uses
-`projectcard--wide` to span both columns and sits first; the rest flow two-up.
+project means adding one `<a class="projectcard">` block and one row here. The two
+`projectcard--wide` cards (JErlang and the Almanac) span both columns and lead; the rest flow
+two-up, so keep the count of ordinary cards even.
