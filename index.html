@@ -275,7 +275,7 @@
         <p class="label">03 / Projects</p>
         <h2>Things I built for the fun of it.</h2>
       </div>
-      <p class="sectionhead__sub">Nine live experiments, each its own repository and its own
+      <p class="sectionhead__sub">Ten live experiments, each its own repository and its own
         subpath on this domain.</p>
     </div>
 
@@ -342,45 +342,49 @@
         <ul class="stack"><li>Ranking</li><li>Hourly</li></ul>
       </a>
 
-      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/orders-service/">
+      <a class="projectcard" href="https://slayyyyer.github.io/orders-service/">
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/orders-service/</p>
         <h3>A three-repo reference system</h3>
-        <p class="projectcard__copy">One orders domain, carried through three repositories. An
-          orders API on Spring Boot 4 and Java 21 — REST and GraphQL over Postgres 16, Flyway
-          migrations, idempotent creation, an RFC 9457 error model and a transactional outbox —
-          recorded end to end by CI rather than run as a live demo. Beside it, a lab of six schema
-          migrations that must run while a writer keeps hammering the table, measuring how long
-          that writer waits, and Terraform that would host the API on Google Cloud: verified in CI
-          against a mock provider, never applied.</p>
+        <p class="projectcard__copy">One orders domain across three repositories: a Spring Boot 4
+          and Java 21 API with REST and GraphQL over Postgres 16, an RFC 9457 error model and a
+          transactional outbox, recorded by CI rather than run as a live demo; six zero-downtime
+          migrations measured against a busy writer; and Terraform verified against a mock provider,
+          never applied.</p>
         <ul class="stack"><li>Spring Boot 4</li><li>Postgres 16</li><li>Terraform</li></ul>
       </a>
 
-      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/what-changed/">
+      <a class="projectcard" href="https://slayyyyer.github.io/what-changed/">
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/what-changed/</p>
         <h3>What Changed Today</h3>
-        <p class="projectcard__copy">Two public datasets snapshotted once a day, published as only
-          what moved: Charlotte 311 service requests and the Federal Register. Every item shows the
-          fields that changed, old to new, with records labelled new, backfilled or aged out rather
-          than deleted — and a failed fetch published as no snapshot today instead of a reassuring
-          zero. GitHub Actions does the fetching and diffing, and Pages serves the result: no server,
-          no database, no accounts, no keys.</p>
+        <p class="projectcard__copy">A daily field-level diff of public records — Charlotte 311
+          service requests and the Federal Register — showing only what moved, with records
+          labelled new, backfilled or aged out and a failed fetch published as no snapshot rather
+          than a reassuring zero. Actions diffs, Pages serves: no server, database or keys.</p>
         <ul class="stack"><li>Daily diff</li><li>Charlotte 311</li><li>Federal Register</li></ul>
       </a>
 
-      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/word-chomp/">
+      <a class="projectcard" href="https://slayyyyer.github.io/word-chomp/">
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/word-chomp/</p>
         <h3>Word Chomp!</h3>
-        <p class="projectcard__copy">A garden word dig: unscramble a rack of six or seven letters,
-          dig up the three-to-seven-letter words hiding in it, and clear every garden word before the
-          two-minute-twenty timer runs out. Any valid word counts — garden words fill the trail and
-          everything else scores as a bonus, with a +100 for using every tile — and a hint costs 50
-          points rather than giving them away. One folder of vanilla HTML, CSS and JavaScript: no
-          build step, no runtime dependency, no network request, and the art, fonts and sound
-          effects all original.</p>
+        <p class="projectcard__copy">A garden word dig: unscramble six- or seven-letter racks, find
+          the three-to-seven-letter words and clear every garden word before the 2:20 timer runs
+          out. Vanilla HTML, CSS and JavaScript in one folder — no build step, no network request,
+          original art and sound.</p>
         <ul class="stack"><li>Word game</li><li>Vanilla JS</li><li>No build step</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/saf-explorer/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/saf-explorer/</p>
+        <h3>SAF Explorer</h3>
+        <p class="projectcard__copy">Opens MX Simulator .saf archives to list and extract what is
+          inside, or packs a folder back into one. Pure Python standard library with an 11.5 MB
+          standalone exe; extraction cannot escape the target folder, and a build writes to a
+          temporary file before replacing the archive.</p>
+        <ul class="stack"><li>Python</li><li>.saf format</li><li>Desktop</li></ul>
       </a>
 
     </div>

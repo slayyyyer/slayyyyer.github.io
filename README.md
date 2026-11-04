@@ -90,8 +90,9 @@ The `#projects` section links the sibling project sites on this domain:
 | Three-repo reference system | <https://slayyyyer.github.io/orders-service/> · <https://slayyyyer.github.io/migration-lab/> · <https://slayyyyer.github.io/gcp-reference-platform/> |
 | What Changed Today | <https://slayyyyer.github.io/what-changed/> |
 | Word Chomp! | <https://slayyyyer.github.io/word-chomp/> |
+| SAF Explorer | <https://slayyyyer.github.io/saf-explorer/> |
 
 Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`, so adding a
 project means adding one `<a class="projectcard">` block and one row here. The two
-`projectcard--wide` cards (JErlang, the Almanac and the three closing entries) span both columns;
-the rest flow two-up, so keep the count of ordinary cards even.
+`projectcard--wide` cards (JErlang and the Almanac) span both columns and lead; the rest flow
+two-up, so keep the count of ordinary cards even.
