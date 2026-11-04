@@ -81,6 +81,7 @@ The `#projects` section links the sibling project sites on this domain:
 
 | Card | URL |
 | --- | --- |
+| Three-repo reference system | <https://slayyyyer.github.io/orders-service/> · <https://slayyyyer.github.io/migration-lab/> · <https://slayyyyer.github.io/gcp-reference-platform/> |
 | JErlang | <https://slayyyyer.github.io/jerlang/> |
 | The Charlotte Almanac | <https://slayyyyer.github.io/clt-almanac/> |
 | Yahtzee | <https://slayyyyer.github.io/yahtzee/> |

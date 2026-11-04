@@ -275,11 +275,25 @@
         <p class="label">03 / Projects</p>
         <h2>Things I built for the fun of it.</h2>
       </div>
-      <p class="sectionhead__sub">Six live experiments, each its own repository and its own
+      <p class="sectionhead__sub">Seven live experiments, each its own repository and its own
         subpath on this domain.</p>
     </div>
 
     <div class="projectgrid">
+
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/orders-service/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/orders-service/</p>
+        <h3>A three-repo reference system</h3>
+        <p class="projectcard__copy">One orders domain, carried through three repositories. An
+          orders API on Spring Boot 4 and Java 21 — REST and GraphQL over Postgres 16, Flyway
+          migrations, idempotent creation, an RFC 9457 error model and a transactional outbox —
+          recorded end to end by CI rather than run as a live demo. Beside it, a lab of six schema
+          migrations that must run while a writer keeps hammering the table, measuring how long
+          that writer waits, and Terraform that would host the API on Google Cloud: verified in CI
+          against a mock provider, never applied.</p>
+        <ul class="stack"><li>Spring Boot 4</li><li>Postgres 16</li><li>Terraform</li></ul>
+      </a>
 
       <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/jerlang/">
         <span class="projectcard__mark" aria-hidden="true">↗</span>
