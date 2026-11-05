@@ -91,8 +91,9 @@ The `#projects` section links the sibling project sites on this domain:
 | What Changed Today | <https://slayyyyer.github.io/what-changed/> |
 | Word Chomp! | <https://slayyyyer.github.io/word-chomp/> |
 | SAF Explorer | <https://slayyyyer.github.io/saf-explorer/> |
+| MX Lab | <https://slayyyyer.github.io/mx-lab/> |
 
 Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`, so adding a
-project means adding one `<a class="projectcard">` block and one row here. The two
-`projectcard--wide` cards (JErlang and the Almanac) span both columns and lead; the rest flow
-two-up, so keep the count of ordinary cards even.
+project means adding one `<a class="projectcard">` block and one row here. The three
+`projectcard--wide` cards span both columns — JErlang and the Almanac lead, MX Lab closes — and
+the rest flow two-up, so keep the count of ordinary cards even.
