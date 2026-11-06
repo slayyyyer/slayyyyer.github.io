@@ -83,6 +83,7 @@ The `#projects` section links the sibling project sites on this domain:
 | --- | --- |
 | JErlang | <https://slayyyyer.github.io/jerlang/> |
 | The Charlotte Almanac | <https://slayyyyer.github.io/clt-almanac/> |
+| Buffy | <https://slayyyyer.github.io/buffy/> |
 | Yahtzee | <https://slayyyyer.github.io/yahtzee/> |
 | Blackjack Lab | <https://slayyyyer.github.io/blackjack/> |
 | Murmur | <https://slayyyyer.github.io/murmur/> |
@@ -94,6 +95,6 @@ The `#projects` section links the sibling project sites on this domain:
 | MX Lab | <https://slayyyyer.github.io/mx-lab/> |
 
 Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`, so adding a
-project means adding one `<a class="projectcard">` block and one row here. The three
-`projectcard--wide` cards span both columns — JErlang and the Almanac lead, MX Lab closes — and
-the rest flow two-up, so keep the count of ordinary cards even.
+project means adding one `<a class="projectcard">` block and one row here. The four
+`projectcard--wide` cards span both columns — JErlang, the Almanac and Buffy lead, MX Lab
+closes — and the rest flow two-up, so keep the count of ordinary cards even.
