@@ -293,15 +293,16 @@
         <ul class="stack"><li>Java 21</li><li>BEAM</li><li>OTP 29</li></ul>
       </a>
 
-      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/clt-almanac/">
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/orders-service/">
         <span class="projectcard__mark" aria-hidden="true">↗</span>
-        <p class="projectcard__path">/clt-almanac/</p>
-        <h3>The Charlotte Almanac</h3>
-        <p class="projectcard__copy">A daily weather note for Charlotte built on the station
-          record back to 1939: ridge and logistic regressions retrained every morning, a backtest
-          that only ever sees what was known that day, and a writer handed the finished numbers
-          with orders not to invent any of them.</p>
-        <ul class="stack"><li>Forecast model</li><li>Backtest</li><li>Charlotte</li></ul>
+        <p class="projectcard__path">/orders-service/</p>
+        <h3>A three-repo reference system</h3>
+        <p class="projectcard__copy">One orders domain across three repositories: a Spring Boot 4
+          and Java 21 API with REST and GraphQL over Postgres 16, an RFC 9457 error model and a
+          transactional outbox, recorded by CI rather than run as a live demo; six zero-downtime
+          migrations measured against a busy writer; and Terraform verified against a mock provider,
+          never applied.</p>
+        <ul class="stack"><li>Spring Boot 4</li><li>Postgres 16</li><li>Terraform</li></ul>
       </a>
 
       <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/buffy/">
@@ -336,48 +337,6 @@
         <ul class="stack"><li>Solver</li><li>Simulation</li></ul>
       </a>
 
-      <a class="projectcard" href="https://slayyyyer.github.io/murmur/">
-        <span class="projectcard__mark" aria-hidden="true">↗</span>
-        <p class="projectcard__path">/murmur/</p>
-        <h3>Murmur</h3>
-        <p class="projectcard__copy">A small animated face in Charlotte that reacts to weather,
-          air quality, official alerts, river levels and earthquakes. A simulated mood, not a
-          real one.</p>
-        <ul class="stack"><li>Live feeds</li><li>Character</li></ul>
-      </a>
-
-      <a class="projectcard" href="https://slayyyyer.github.io/motobuzz/">
-        <span class="projectcard__mark" aria-hidden="true">↗</span>
-        <p class="projectcard__path">/motobuzz/</p>
-        <h3>MotoBuzz</h3>
-        <p class="projectcard__copy">Reads public motocross news, subreddits and rider and brand
-          channels once an hour, then ranks what the sport is actually talking about.</p>
-        <ul class="stack"><li>Ranking</li><li>Hourly</li></ul>
-      </a>
-
-      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/orders-service/">
-        <span class="projectcard__mark" aria-hidden="true">↗</span>
-        <p class="projectcard__path">/orders-service/</p>
-        <h3>A three-repo reference system</h3>
-        <p class="projectcard__copy">One orders domain across three repositories: a Spring Boot 4
-          and Java 21 API with REST and GraphQL over Postgres 16, an RFC 9457 error model and a
-          transactional outbox, recorded by CI rather than run as a live demo; six zero-downtime
-          migrations measured against a busy writer; and Terraform verified against a mock provider,
-          never applied.</p>
-        <ul class="stack"><li>Spring Boot 4</li><li>Postgres 16</li><li>Terraform</li></ul>
-      </a>
-
-      <a class="projectcard" href="https://slayyyyer.github.io/what-changed/">
-        <span class="projectcard__mark" aria-hidden="true">↗</span>
-        <p class="projectcard__path">/what-changed/</p>
-        <h3>What Changed Today</h3>
-        <p class="projectcard__copy">A daily field-level diff of public records — Charlotte 311
-          service requests and the Federal Register — showing only what moved, with records
-          labelled new, backfilled or aged out and a failed fetch published as no snapshot rather
-          than a reassuring zero. Actions diffs, Pages serves: no server, database or keys.</p>
-        <ul class="stack"><li>Daily diff</li><li>Charlotte 311</li><li>Federal Register</li></ul>
-      </a>
-
       <a class="projectcard" href="https://slayyyyer.github.io/word-chomp/">
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/word-chomp/</p>
@@ -387,17 +346,6 @@
           out. Vanilla HTML, CSS and JavaScript in one folder — no build step, no network request,
           original art and sound.</p>
         <ul class="stack"><li>Word game</li><li>Vanilla JS</li><li>No build step</li></ul>
-      </a>
-
-      <a class="projectcard" href="https://slayyyyer.github.io/saf-explorer/">
-        <span class="projectcard__mark" aria-hidden="true">↗</span>
-        <p class="projectcard__path">/saf-explorer/</p>
-        <h3>SAF Explorer</h3>
-        <p class="projectcard__copy">Opens MX Simulator .saf archives to list and extract what is
-          inside, or packs a folder back into one. Pure Python standard library with an 11.5 MB
-          standalone exe; extraction cannot escape the target folder, and a build writes to a
-          temporary file before replacing the archive.</p>
-        <ul class="stack"><li>Python</li><li>.saf format</li><li>Desktop</li></ul>
       </a>
 
       <a class="projectcard" href="https://slayyyyer.github.io/earth-radio/">
@@ -411,6 +359,38 @@
         <ul class="stack"><li>Web Audio</li><li>Leaflet</li><li>USGS feed</li></ul>
       </a>
 
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/clt-almanac/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/clt-almanac/</p>
+        <h3>The Charlotte Almanac</h3>
+        <p class="projectcard__copy">A daily weather note for Charlotte built on the station
+          record back to 1939: ridge and logistic regressions retrained every morning, a backtest
+          that only ever sees what was known that day, and a writer handed the finished numbers
+          with orders not to invent any of them.</p>
+        <ul class="stack"><li>Forecast model</li><li>Backtest</li><li>Charlotte</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/murmur/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/murmur/</p>
+        <h3>Murmur</h3>
+        <p class="projectcard__copy">A small animated face in Charlotte that reacts to weather,
+          air quality, official alerts, river levels and earthquakes. A simulated mood, not a
+          real one.</p>
+        <ul class="stack"><li>Live feeds</li><li>Character</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/what-changed/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/what-changed/</p>
+        <h3>What Changed Today</h3>
+        <p class="projectcard__copy">A daily field-level diff of public records — Charlotte 311
+          service requests and the Federal Register — showing only what moved, with records
+          labelled new, backfilled or aged out and a failed fetch published as no snapshot rather
+          than a reassuring zero. Actions diffs, Pages serves: no server, database or keys.</p>
+        <ul class="stack"><li>Daily diff</li><li>Charlotte 311</li><li>Federal Register</li></ul>
+      </a>
+
       <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/mx-lab/">
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/mx-lab/</p>
@@ -422,6 +402,26 @@
           contradictions while recording source quirks as warnings that each name their sheet.
           Unofficial, derived statistics only: no source PDFs are stored or served.</p>
         <ul class="stack"><li>Node</li><li>Dataset</li><li>Static site</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/motobuzz/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/motobuzz/</p>
+        <h3>MotoBuzz</h3>
+        <p class="projectcard__copy">Reads public motocross news, subreddits and rider and brand
+          channels once an hour, then ranks what the sport is actually talking about.</p>
+        <ul class="stack"><li>Ranking</li><li>Hourly</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/saf-explorer/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/saf-explorer/</p>
+        <h3>SAF Explorer</h3>
+        <p class="projectcard__copy">Opens MX Simulator .saf archives to list and extract what is
+          inside, or packs a folder back into one. Pure Python standard library with an 11.5 MB
+          standalone exe; extraction cannot escape the target folder, and a build writes to a
+          temporary file before replacing the archive.</p>
+        <ul class="stack"><li>Python</li><li>.saf format</li><li>Desktop</li></ul>
       </a>
 
     </div>

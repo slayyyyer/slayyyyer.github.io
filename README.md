@@ -82,21 +82,23 @@ The `#projects` section links the sibling project sites on this domain:
 | Card | URL |
 | --- | --- |
 | JErlang | <https://slayyyyer.github.io/jerlang/> |
-| The Charlotte Almanac | <https://slayyyyer.github.io/clt-almanac/> |
+| Three-repo reference system | <https://slayyyyer.github.io/orders-service/> · <https://slayyyyer.github.io/migration-lab/> · <https://slayyyyer.github.io/gcp-reference-platform/> |
 | Buffy | <https://slayyyyer.github.io/buffy/> |
 | Yahtzee | <https://slayyyyer.github.io/yahtzee/> |
 | Blackjack Lab | <https://slayyyyer.github.io/blackjack/> |
-| Murmur | <https://slayyyyer.github.io/murmur/> |
-| MotoBuzz | <https://slayyyyer.github.io/motobuzz/> |
-| Three-repo reference system | <https://slayyyyer.github.io/orders-service/> · <https://slayyyyer.github.io/migration-lab/> · <https://slayyyyer.github.io/gcp-reference-platform/> |
-| What Changed Today | <https://slayyyyer.github.io/what-changed/> |
 | Word Chomp! | <https://slayyyyer.github.io/word-chomp/> |
-| SAF Explorer | <https://slayyyyer.github.io/saf-explorer/> |
 | Earth Radio | <https://slayyyyer.github.io/earth-radio/> |
+| The Charlotte Almanac | <https://slayyyyer.github.io/clt-almanac/> |
+| Murmur | <https://slayyyyer.github.io/murmur/> |
+| What Changed Today | <https://slayyyyer.github.io/what-changed/> |
 | MX Lab | <https://slayyyyer.github.io/mx-lab/> |
+| MotoBuzz | <https://slayyyyer.github.io/motobuzz/> |
+| SAF Explorer | <https://slayyyyer.github.io/saf-explorer/> |
 
 Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`, so adding a
-project means adding one `<a class="projectcard">` block and one row here. The five
-`projectcard--wide` cards span both columns — JErlang, the Almanac and Buffy lead, the
-three-repo system sits mid-grid, MX Lab closes — and the rest flow two-up, so keep the count
-of ordinary cards even.
+project means adding one `<a class="projectcard">` block and one row here. The cards run in
+thematic runs — systems, then play, then Charlotte, then motocross — and because they flow
+two-up, each pair is a theme too: the two exact games, then two browser-only pieces, then the
+city's weather face beside its record diff, then motocross news beside its archive tool. The
+five `projectcard--wide` cards span both columns at the head and inside those runs, so keep
+the count of ordinary cards even.
