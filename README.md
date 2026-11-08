@@ -60,6 +60,10 @@ Notes:
 - Everything is transform-only and updated in `requestAnimationFrame`, so scrolling stays
   off the layout path.
 - `prefers-reduced-motion: reduce` disables the script and the entrance animations.
+- The `/projects/` page's back link (`assets/site.js`) steps back through history when the
+  visitor arrived from the homepage, so the browser restores the section and scroll position they
+  left from; its `href` still points at the homepage for a cold arrival, a new tab or a
+  modified click.
 
 ## Editing
 

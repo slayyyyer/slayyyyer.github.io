@@ -65,4 +65,24 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll);
   applyScroll();
+
+  /* Leave the projects page the way the visitor arrived: if they came from this site,
+     step back through history so the browser restores their homepage section and scroll.
+     The link's own href stays as the fallback for a cold arrival or a modified click. */
+  var pageback = document.querySelector(".pageback");
+  var referrer = null;
+
+  if (pageback && document.referrer) {
+    try { referrer = new URL(document.referrer); } catch (error) { referrer = null; }
+  }
+
+  if (referrer && referrer.origin === location.origin
+      && referrer.pathname.replace(/index\.html$/, "") === "/"
+      && window.history.length > 1) {
+    pageback.addEventListener("click", function (event) {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      window.history.back();
+    });
+  }
 })();
