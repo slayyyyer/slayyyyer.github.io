@@ -82,6 +82,7 @@ The `#projects` section links the sibling project sites on this domain:
 | Card | URL |
 | --- | --- |
 | JErlang | <https://slayyyyer.github.io/jerlang/> |
+| Morphex (english-inflector) | <https://slayyyyer.github.io/morphex/> |
 | Three-repo reference system | <https://slayyyyer.github.io/orders-service/> · <https://slayyyyer.github.io/migration-lab/> · <https://slayyyyer.github.io/gcp-reference-platform/> |
 | Buffy | <https://slayyyyer.github.io/buffy/> |
 | Yahtzee | <https://slayyyyer.github.io/yahtzee/> |
@@ -97,8 +98,8 @@ The `#projects` section links the sibling project sites on this domain:
 
 Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`, so adding a
 project means adding one `<a class="projectcard">` block and one row here. The cards run in
-thematic runs — systems, then play, then Charlotte, then motocross — and because they flow
+thematic runs — systems and tooling, then play, then Charlotte, then motocross — and because they flow
 two-up, each pair is a theme too: the two exact games, then two browser-only pieces, then the
 city's weather face beside its record diff, then motocross news beside its archive tool. The
-five `projectcard--wide` cards span both columns at the head and inside those runs, so keep
+six `projectcard--wide` cards span both columns at the head and inside those runs, so keep
 the count of ordinary cards even.
