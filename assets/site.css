@@ -740,6 +740,7 @@ body.is-scrolled .scrollcue {
   background: linear-gradient(90deg, rgba(43, 123, 166, .55), rgba(224, 69, 139, .5));
 }
 
+.sectionhead h1,
 .sectionhead h2 {
   margin-top: 12px;
   color: #0c2237;
@@ -1366,3 +1367,28 @@ body.is-scrolled .scrollcue {
   *::before,
   *::after { transition: none !important; }
 }
+
+/* ---------- projects page, and the link out to it ---------- */
+
+.projects__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.collection { padding-top: 72px; }
+
+.pageback {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 20px;
+  color: #22688f;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.pageback:hover { color: #0a3a63; }

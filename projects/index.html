@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Justin Baker</title>
+<meta name="description" content="The full collection: fourteen live experiments — an Erlang runtime for the JVM, a deterministic English inflection library, two exact-probability games, Charlotte weather and records projects, and motocross tooling.">
+<link rel="canonical" href="https://slayyyyer.github.io/projects/">
+<meta property="og:title" content="Projects — Justin Baker">
+<meta property="og:description" content="Fourteen live experiments: systems, browser games, Charlotte data projects and motocross tooling.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://slayyyyer.github.io/projects/">
+<meta property="og:site_name" content="Justin Baker">
+<meta property="og:image" content="https://slayyyyer.github.io/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Justin Baker — big systems, small details. Principal engineer, Charlotte, NC.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projects — Justin Baker">
+<meta name="twitter:description" content="Fourteen live experiments: systems, browser games, Charlotte data projects and motocross tooling.">
+<meta name="twitter:image" content="https://slayyyyer.github.io/og.png">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#e6f4ff">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+
+<a class="skip-link" href="#collection">Skip to projects</a>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__base"></div>
+  <div class="aurora aurora--one" data-speed="0.1"></div>
+  <div class="aurora aurora--two" data-speed="0.16"></div>
+  <div class="aurora aurora--three" data-speed="0.07"></div>
+  <div class="orb orb--one" data-speed="0.09"></div>
+  <div class="orb orb--two" data-speed="0.14"></div>
+  <div class="bokeh bokeh--far" data-speed="0.04"></div>
+  <div class="bokeh bokeh--near" data-speed="0.08"></div>
+  <div class="ring ring--one" data-speed="0.12"></div>
+  <div class="ring ring--two" data-speed="0.18"></div>
+  <div class="scene__glow"></div>
+  <div class="scene__grain"></div>
+</div>
+
+<header class="topbar">
+  <div class="shell">
+    <div class="topbar__bar">
+      <a class="brand" href="../">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Justin Baker</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__sm-hide" href="../#expertise">Expertise</a>
+        <a href="../#about">About</a>
+        <a href="../#projects">Projects</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="projects collection shell" id="collection">
+    <a class="pageback" href="../">← Back to the homepage</a>
+
+    <div class="sectionhead">
+      <div>
+        <p class="label">All projects</p>
+        <h1>Everything I built for the fun of it.</h1>
+      </div>
+      <p class="sectionhead__sub">Fourteen live experiments, each its own repository and its own
+        subpath on this domain — the three from the homepage first.</p>
+    </div>
+
+    <div class="projectgrid">
+
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/jerlang/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/jerlang/</p>
+        <h3>An Erlang runtime for the JVM</h3>
+        <p class="projectcard__copy">Reads the BEAM files the Erlang compiler produces and
+          interprets them on the JVM — processes, message passing, links, monitors and
+          distribution written in Java, one reflective call away from Java code. OTP’s own
+          gen_server and supervisor run unmodified, and the artifact is published on Maven
+          Central.</p>
+        <ul class="stack"><li>Java 21</li><li>BEAM</li><li>OTP 29</li></ul>
+      </a>
+
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/orders-service/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/orders-service/</p>
+        <h3>A three-repo reference system</h3>
+        <p class="projectcard__copy">One orders domain across three repositories: a Spring Boot 4
+          and Java 21 API with REST and GraphQL over Postgres 16, an RFC 9457 error model and a
+          transactional outbox, recorded by CI rather than run as a live demo; six zero-downtime
+          migrations measured against a busy writer; and Terraform verified against a mock provider,
+          never applied.</p>
+        <ul class="stack"><li>Spring Boot 4</li><li>Postgres 16</li><li>Terraform</li></ul>
+      </a>
+
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/buffy/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/buffy/</p>
+        <h3>A desk pet for your coding agent</h3>
+        <p class="projectcard__copy">A tiny always-on-top companion for long coding sessions:
+          Claude Code hooks, a repo watcher and a buffy CLI send thinking, working, needs-you and
+          done to a daemon on 127.0.0.1, and an Electron overlay draws the pet. The daemon binds
+          to loopback only, collects no telemetry and keeps its state in ~/.buffy; buffy hatch
+          draws new sprites through the OpenAI Images API, and the Windows installer ships the app
+          and its daemon together.</p>
+        <ul class="stack"><li>Electron</li><li>Node CLI</li><li>Local daemon</li></ul>
+      </a>
+
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/morphex/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/morphex/</p>
+        <h3>Pluralize English nouns, deterministically</h3>
+        <p class="projectcard__copy">A Java 17 library in the spirit of evo-inflector: no
+          dependencies, no network calls, no model downloads. A 147,338-entry auditable lexicon,
+          three productive spelling rules and a first-match-wins precedence order, with an
+          analyze API that says which layer chose a form and what the alternatives were. Exact on
+          the frozen 36,241-word set where stock lands at 96.5%, MIT code over CC BY-SA 3.0 data,
+          published on Maven Central.</p>
+        <ul class="stack"><li>Java 17</li><li>147k lexicon</li><li>JMH</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/yahtzee/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/yahtzee/</p>
+        <h3>Exact-probability Yahtzee</h3>
+        <p class="projectcard__copy">Play against a CPU that solves every roll with exact
+          probabilities and keeps an exact table for the rest of the game, endgame included.</p>
+        <ul class="stack"><li>Game</li><li>Exact EV</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/blackjack/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/blackjack/</p>
+        <h3>Blackjack Lab</h3>
+        <p class="projectcard__copy">An exact solver and the lab around it: a strategy chart
+          that re-derives itself whenever a rule changes, plus card counting and a simulation
+          target to prove the number.</p>
+        <ul class="stack"><li>Solver</li><li>Simulation</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/word-chomp/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/word-chomp/</p>
+        <h3>Word Chomp!</h3>
+        <p class="projectcard__copy">A garden word dig: unscramble six- or seven-letter racks, find
+          the three-to-seven-letter words and clear every garden word before the 2:20 timer runs
+          out. Vanilla HTML, CSS and JavaScript in one folder — no build step, no network request,
+          original art and sound.</p>
+        <ul class="stack"><li>Word game</li><li>Vanilla JS</li><li>No build step</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/earth-radio/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/earth-radio/</p>
+        <h3>Earth Radio: one day of the planet, in sound</h3>
+        <p class="projectcard__copy">A single UTC day of real USGS earthquakes, magnitude 2.5 and
+          up, played as a 90-second ambient piece: longitude sets stereo position, depth sets a
+          quantized pitch in D minor pentatonic, magnitude sets gain and envelope. Every sound is
+          synthesized in the browser with the Web Audio API — no samples, keys or backend.</p>
+        <ul class="stack"><li>Web Audio</li><li>Leaflet</li><li>USGS feed</li></ul>
+      </a>
+
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/clt-almanac/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/clt-almanac/</p>
+        <h3>The Charlotte Almanac</h3>
+        <p class="projectcard__copy">A daily weather note for Charlotte built on the station
+          record back to 1939: ridge and logistic regressions retrained every morning, a backtest
+          that only ever sees what was known that day, and a writer handed the finished numbers
+          with orders not to invent any of them.</p>
+        <ul class="stack"><li>Forecast model</li><li>Backtest</li><li>Charlotte</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/murmur/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/murmur/</p>
+        <h3>Murmur</h3>
+        <p class="projectcard__copy">A small animated face in Charlotte that reacts to weather,
+          air quality, official alerts, river levels and earthquakes. A simulated mood, not a
+          real one.</p>
+        <ul class="stack"><li>Live feeds</li><li>Character</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/what-changed/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/what-changed/</p>
+        <h3>What Changed Today</h3>
+        <p class="projectcard__copy">A daily field-level diff of public records — Charlotte 311
+          service requests and the Federal Register — showing only what moved, with records
+          labelled new, backfilled or aged out and a failed fetch published as no snapshot rather
+          than a reassuring zero. Actions diffs, Pages serves: no server, database or keys.</p>
+        <ul class="stack"><li>Daily diff</li><li>Charlotte 311</li><li>Federal Register</li></ul>
+      </a>
+
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/mx-lab/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/mx-lab/</p>
+        <h3>MX Lab: seven seasons, measured</h3>
+        <p class="projectcard__copy">One committed dataset of AMA Pro Motocross and Supercross
+          results — seven seasons, 195 events, 17,434 result rows and 250,699 lap times — with six
+          analyses published on top of it: lap chart, fade, lap one, qualifying, titles and an Elo
+          rating per class. Rebuilds are byte-identical, and the gate fails the build on
+          contradictions while recording source quirks as warnings that each name their sheet.
+          Unofficial, derived statistics only: no source PDFs are stored or served.</p>
+        <ul class="stack"><li>Node</li><li>Dataset</li><li>Static site</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/motobuzz/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/motobuzz/</p>
+        <h3>MotoBuzz</h3>
+        <p class="projectcard__copy">Reads public motocross news, subreddits and rider and brand
+          channels once an hour, then ranks what the sport is actually talking about.</p>
+        <ul class="stack"><li>Ranking</li><li>Hourly</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/saf-explorer/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/saf-explorer/</p>
+        <h3>SAF Explorer</h3>
+        <p class="projectcard__copy">Opens MX Simulator .saf archives to list and extract what is
+          inside, or packs a folder back into one. Pure Python standard library with an 11.5 MB
+          standalone exe; extraction cannot escape the target folder, and a build writes to a
+          temporary file before replacing the archive.</p>
+        <ul class="stack"><li>Python</li><li>.saf format</li><li>Desktop</li></ul>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__inner">
+      <p class="footer__brand">Justin Baker · Charlotte, NC</p>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="../#expertise">Expertise</a>
+        <a href="../#about">About</a>
+        <a href="../#projects">Projects</a>
+        <a href="../#contact">Contact</a>
+        <a href="https://github.com/slayyyyer" target="_blank" rel="noopener">GitHub</a>
+        <a href="#top">Back to top ↑</a>
+      </nav>
+    </div>
+    <div class="footer__fine">
+      <p>© 2026 Justin Baker. Hand-built with plain HTML, CSS and a small parallax script.</p>
+      <p>The gloss is an affectionate nod to Mac OS X Aqua. Not affiliated with Apple.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>

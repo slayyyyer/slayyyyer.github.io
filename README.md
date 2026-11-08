@@ -1,8 +1,8 @@
 # slayyyyer.github.io
 
-A single-page personal site: a bright, layered “Aqua” desktop with scroll and pointer parallax.
-Plain HTML, CSS and a small vanilla script — no dependencies and no build step. The only image
-is `og.png`, the 1200×630 social preview card.
+A two-page personal site: the homepage and a `/projects/` collection page, both a bright, layered
+“Aqua” desktop with scroll and pointer parallax. Plain HTML, CSS and a small vanilla script — no
+dependencies and no build step. The only image is `og.png`, the 1200×630 social preview card.
 
 ## Preview locally
 
@@ -66,7 +66,9 @@ Notes:
 | What | Where |
 | --- | --- |
 | Copy, sections, links, email | `index.html` |
-| Project cards (the `#projects` section) | `index.html`, styled by `.projectcard` in `assets/site.css` |
+| Project cards — the three featured on the homepage | `index.html`, `#projects` section |
+| Project cards — the full collection | `projects/index.html` |
+| Project card styling | `.projectcard` in `assets/site.css` |
 | Colours, glass, type, layout | `assets/site.css` (`:root` holds the palette) |
 | Parallax speeds | `data-speed` / `data-mouse` attributes in `index.html` |
 | Parallax and scroll-cue behaviour | `assets/site.js` |
@@ -77,14 +79,15 @@ The contact address appears in the About spec sheet and the contact section. Sea
 
 ## Subprojects
 
-The `#projects` section links the sibling project sites on this domain:
+The sibling project sites on this domain, in the order they appear on `projects/index.html` (the
+homepage's `#projects` section shows the first three):
 
 | Card | URL |
 | --- | --- |
 | JErlang | <https://slayyyyer.github.io/jerlang/> |
-| Morphex (english-inflector) | <https://slayyyyer.github.io/morphex/> |
 | Three-repo reference system | <https://slayyyyer.github.io/orders-service/> · <https://slayyyyer.github.io/migration-lab/> · <https://slayyyyer.github.io/gcp-reference-platform/> |
 | Buffy | <https://slayyyyer.github.io/buffy/> |
+| Morphex (english-inflector) | <https://slayyyyer.github.io/morphex/> |
 | Yahtzee | <https://slayyyyer.github.io/yahtzee/> |
 | Blackjack Lab | <https://slayyyyer.github.io/blackjack/> |
 | Word Chomp! | <https://slayyyyer.github.io/word-chomp/> |
@@ -96,9 +99,9 @@ The `#projects` section links the sibling project sites on this domain:
 | MotoBuzz | <https://slayyyyer.github.io/motobuzz/> |
 | SAF Explorer | <https://slayyyyer.github.io/saf-explorer/> |
 
-Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`, so adding a
-project means adding one `<a class="projectcard">` block and one row here. The cards run in
-thematic runs — systems and tooling, then play, then Charlotte, then motocross — and because they flow
+Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`. Adding a project
+means adding its card to `projects/index.html` and a row here — and to `index.html` as well if it
+should be one of the three featured cards. The cards run in thematic runs — systems and tooling, then play, then Charlotte, then motocross — and because they flow
 two-up, each pair is a theme too: the two exact games, then two browser-only pieces, then the
 city's weather face beside its record diff, then motocross news beside its archive tool. The
 six `projectcard--wide` cards span both columns at the head and inside those runs, so keep
