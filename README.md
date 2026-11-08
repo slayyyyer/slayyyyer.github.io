@@ -106,3 +106,6 @@ two-up, each pair is a theme too: the two exact games, then two browser-only pie
 city's weather face beside its record diff, then motocross news beside its archive tool. The
 six `projectcard--wide` cards span both columns at the head and inside those runs, so keep
 the count of ordinary cards even.
+
+The homepage's header and footer `Projects` links go to `projects/`; its own `#projects` anchor is
+kept so existing links still land on the three featured cards.
