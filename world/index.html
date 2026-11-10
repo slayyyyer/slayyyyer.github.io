@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My World — Justin Baker</title>
+<meta name="description" content="An illustrated, explorable map of sixteen projects: a foundry coast, an arcade quarter, observatory hills and a motocross valley.">
+<link rel="canonical" href="https://slayyyyer.github.io/world/">
+<meta property="og:title" content="My World — Justin Baker">
+<meta property="og:description" content="Sixteen projects as places: an engine works, a harbor, an arcade, a weather station and a motocross valley.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://slayyyyer.github.io/world/">
+<meta property="og:site_name" content="Justin Baker">
+<meta property="og:image" content="https://slayyyyer.github.io/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Justin Baker — big systems, small details. Principal engineer, Charlotte, NC.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My World — Justin Baker">
+<meta name="twitter:description" content="Sixteen projects as places: an engine works, a harbor, an arcade, a weather station and a motocross valley.">
+<meta name="twitter:image" content="https://slayyyyer.github.io/og.png">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#e6f4ff">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body class="world-page">
+
+<a class="skip-link" href="#world">Skip to the world</a>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__base"></div>
+  <div class="aurora aurora--one" data-speed="0.1"></div>
+  <div class="aurora aurora--two" data-speed="0.16"></div>
+  <div class="aurora aurora--three" data-speed="0.07"></div>
+  <div class="orb orb--one" data-speed="0.09"></div>
+  <div class="orb orb--two" data-speed="0.14"></div>
+  <div class="bokeh bokeh--far" data-speed="0.04"></div>
+  <div class="bokeh bokeh--near" data-speed="0.08"></div>
+  <div class="ring ring--one" data-speed="0.12"></div>
+  <div class="ring ring--two" data-speed="0.18"></div>
+  <div class="scene__glow"></div>
+  <div class="scene__grain"></div>
+</div>
+
+<header class="topbar">
+  <div class="shell">
+    <div class="topbar__bar">
+      <a class="brand" href="../">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Justin Baker</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__sm-hide" href="../#expertise">Expertise</a>
+        <a class="nav__xs-hide" href="../#about">About</a>
+        <a href="../projects/">Projects</a>
+        <a href="./" aria-current="page">My world</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="world-intro shell" id="world">
+    <a class="pageback" href="../">← Back to the homepage</a>
+
+    <div class="sectionhead">
+      <div>
+        <p class="label">My world</p>
+        <h1>Sixteen projects, one small world.</h1>
+      </div>
+      <p class="sectionhead__sub">Four regions: the systems on the coast, the games in the
+        arcade, the data projects up on the hills, and the motocross valley. Every building
+        opens its project.</p>
+    </div>
+
+    <div class="world-toolbar">
+      <p class="world-hint" id="world-hint"><strong>Hover or focus</strong> a building for a
+        one-line note. On a narrow screen the list comes first; the map is still there, and it
+        scrolls sideways. Boggle sits at the end of the Arcade quarter.</p>
+      <div class="world-toggle" data-world-toggle hidden>
+        <button type="button" data-view-btn="map" aria-pressed="true" aria-controls="world-view">Map</button>
+        <button type="button" data-view-btn="list" aria-pressed="false" aria-controls="world-view">List view</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="world-stage shell" aria-labelledby="world-heading">
+    <h2 class="world-sr" id="world-heading">Map and list of projects</h2>
+    <p class="world-sr" id="world-map-instructions">The map is wider than a phone screen. When
+      it is focused, use the arrow keys to scroll sideways, or switch to the list view.</p>
+    <p class="world-sr" role="status" data-world-status></p>
+
+    <div class="world-view" id="world-view">
+
+      <div class="world-frame">
+        <div class="world-frame__bar">
+          <span class="lights lights--sm" aria-hidden="true">
+            <i class="light light--red"></i><i class="light light--amber"></i><i class="light light--green"></i>
+          </span>
+          <span class="world-frame__title">my-world.map</span>
+          <span class="world-frame__meta">4 regions · 16 projects</span>
+        </div>
+
+        <div class="world-viewport" tabindex="0" role="region"
+             aria-label="Illustrated project map"
+             aria-describedby="world-map-instructions">
+          <svg class="world-map" viewBox="0 0 1200 760" role="group"
+               aria-labelledby="map-title map-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="map-title">Illustrated map of Justin Baker’s projects</title>
+            <desc id="map-desc">Sixteen linked buildings and landmarks across four regions:
+              Foundry coast, Arcade quarter, Observatory hills and Motocross valley.</desc>
+
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop class="sky-stop sky-a" offset="0"/>
+                <stop class="sky-stop sky-b" offset=".58"/>
+                <stop class="sky-stop sky-c" offset="1"/>
+              </linearGradient>
+              <linearGradient id="gWall" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset=".52" stop-color="#f3faff"/>
+                <stop offset="1" stop-color="#d6e9f7"/>
+              </linearGradient>
+              <linearGradient id="gWallWarm" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fffdf8"/>
+                <stop offset=".55" stop-color="#fbf2e3"/>
+                <stop offset="1" stop-color="#efdfc6"/>
+              </linearGradient>
+              <linearGradient id="gRoof" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#a6dcfb"/>
+                <stop offset=".5" stop-color="#62b3e7"/>
+                <stop offset="1" stop-color="#3f91cf"/>
+              </linearGradient>
+              <linearGradient id="gRoofDeep" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#5aaee8"/>
+                <stop offset="1" stop-color="#1f6fa8"/>
+              </linearGradient>
+              <linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#d7f1ff"/>
+                <stop offset="1" stop-color="#7fc0e6"/>
+              </linearGradient>
+              <linearGradient id="gGlassDeep" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#a6d9f5"/>
+                <stop offset="1" stop-color="#3c8cbf"/>
+              </linearGradient>
+              <linearGradient id="gFoundry" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#dbe8e6"/>
+                <stop offset=".6" stop-color="#c9dcde"/>
+                <stop offset="1" stop-color="#bcd2d6"/>
+              </linearGradient>
+              <linearGradient id="gArcade" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f2eed6"/>
+                <stop offset=".6" stop-color="#e4e4c2"/>
+                <stop offset="1" stop-color="#d5dfb4"/>
+              </linearGradient>
+              <linearGradient id="gHills" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#e6e2ef"/>
+                <stop offset=".6" stop-color="#d8d2e7"/>
+                <stop offset="1" stop-color="#c7c0d9"/>
+              </linearGradient>
+              <linearGradient id="gValley" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f1dfc1"/>
+                <stop offset=".6" stop-color="#e6cda8"/>
+                <stop offset="1" stop-color="#d9bd94"/>
+              </linearGradient>
+              <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#c7e9f7"/>
+                <stop offset="1" stop-color="#8cc8e7"/>
+              </linearGradient>
+              <linearGradient id="gHaze" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset=".5" stop-color="#ffffff" stop-opacity=".55"/>
+                <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+
+            <rect width="1200" height="760" fill="url(#skyGrad)"/>
+
+            <g class="stars" aria-hidden="true">
+              <circle cx="70" cy="52" r="1.2"/><circle cx="132" cy="96" r="1"/>
+              <circle cx="208" cy="44" r="1.4"/><circle cx="268" cy="122" r="1"/>
+              <circle cx="338" cy="60" r="1.1"/><circle cx="404" cy="34" r="1.3"/>
+              <circle cx="470" cy="108" r="1"/><circle cx="548" cy="54" r="1.2"/>
+              <circle cx="616" cy="120" r="1"/><circle cx="686" cy="38" r="1.4"/>
+              <circle cx="754" cy="98" r="1.1"/><circle cx="824" cy="56" r="1"/>
+              <circle cx="896" cy="124" r="1.2"/><circle cx="958" cy="46" r="1.3"/>
+              <circle cx="1028" cy="108" r="1"/><circle cx="1104" cy="58" r="1.2"/>
+              <circle cx="1160" cy="126" r="1"/><circle cx="286" cy="188" r="1"/>
+              <circle cx="590" cy="196" r="1.1"/><circle cx="980" cy="198" r="1"/>
+              <circle cx="110" cy="214" r="1"/><circle cx="1054" cy="216" r="1.2"/>
+            </g>
+
+            <g class="sun" aria-hidden="true">
+              <circle cx="1140" cy="150" r="40" fill="#fff6cd" opacity=".35"/>
+              <circle cx="1140" cy="150" r="27" fill="#ffe6a3" stroke="#f0c266" stroke-width="1.2"/>
+              <circle cx="1132" cy="142" r="8" fill="#fff8dc" opacity=".7"/>
+            </g>
+
+            <g class="moon" aria-hidden="true">
+              <circle cx="1140" cy="148" r="21" fill="#f8fbff" stroke="#d7e4ef" stroke-width="1"/>
+              <circle cx="1149" cy="141" r="18" fill="#3d5d78"/>
+            </g>
+
+            <g class="cloud" aria-hidden="true">
+              <ellipse cx="196" cy="124" rx="44" ry="13"/>
+              <ellipse cx="222" cy="116" rx="28" ry="12"/>
+              <ellipse cx="170" cy="118" rx="20" ry="9"/>
+            </g>
+            <g class="cloud" aria-hidden="true">
+              <ellipse cx="646" cy="86" rx="34" ry="10"/>
+              <ellipse cx="668" cy="79" rx="22" ry="9"/>
+            </g>
+            <g class="cloud" aria-hidden="true">
+              <ellipse cx="900" cy="176" rx="40" ry="11"/>
+              <ellipse cx="926" cy="168" rx="25" ry="10"/>
+            </g>
+
+            <g aria-hidden="true">
+              <path d="M0 340C90 292 170 306 250 326C340 348 410 300 500 314C590 328 660 292 750 308C840 324 920 296 1010 310C1100 324 1160 306 1200 318L1200 424L0 424Z" fill="#c3d9e6" opacity=".85"/>
+              <path d="M0 372C96 336 182 354 276 370C370 386 452 348 552 362C652 376 730 350 828 362C930 374 1054 348 1200 366L1200 430L0 430Z" fill="#b5cee0" opacity=".7"/>
+              <path d="M90 386l14-26 14 26zM246 390l12-22 12 22zM470 384l15-28 15 28zM706 392l12-22 12 22zM962 386l14-26 14 26zM1112 394l11-20 11 20z" fill="#8fb6a0" opacity=".55"/>
+            </g>
+
+            <path d="M0 286C64 262 134 272 204 284C286 298 334 268 410 274C474 279 522 292 564 310L564 402L0 402Z" fill="url(#gFoundry)"/>
+            <path d="M544 288C614 250 690 258 768 266C846 274 926 246 1004 252C1082 258 1148 250 1200 262L1200 404L544 404Z" fill="url(#gArcade)"/>
+            <path d="M0 398C84 370 172 394 260 410C352 426 464 394 580 412L620 420L620 760L0 760Z" fill="url(#gHills)"/>
+            <path d="M600 402C696 382 796 414 900 400C1006 384 1108 402 1200 390L1200 760L600 760Z" fill="url(#gValley)"/>
+            <rect x="0" y="394" width="1200" height="18" fill="url(#gHaze)" opacity=".65"/>
+
+            <g aria-hidden="true">
+              <path d="M132 306C178 298 230 304 284 320L284 398C236 402 178 398 132 388Z" fill="url(#gWater)"/>
+              <path d="M132 306C178 298 230 304 284 320" fill="none" stroke="#f7fbff" stroke-width="2" opacity=".6"/>
+              <path d="M150 372q12-6 24 0M204 384q10-5 20 0M232 358q11-6 22 0" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity=".6"/>
+              <ellipse cx="300" cy="382" rx="14" ry="5" fill="#a9c0c2" opacity=".7"/>
+              <ellipse cx="470" cy="372" rx="11" ry="4" fill="#a9c0c2" opacity=".6"/>
+              <path d="M28 386q10-14 20 0M44 390q7-10 14 0M506 380q9-12 18 0M530 388q6-8 12 0" fill="none" stroke="#89a7a4" stroke-width="1.4" stroke-linecap="round" opacity=".7"/>
+            </g>
+
+            <g aria-hidden="true">
+              <path d="M560 366C632 348 706 364 780 356C854 348 938 360 1014 350C1080 342 1146 352 1192 344" fill="none" stroke="#f7f0d8" stroke-width="10" stroke-linecap="round" opacity=".75"/>
+              <ellipse cx="610" cy="380" rx="36" ry="9" fill="#cfe0ae" opacity=".75"/>
+              <ellipse cx="842" cy="384" rx="44" ry="10" fill="#cfe0ae" opacity=".65"/>
+              <ellipse cx="1038" cy="376" rx="38" ry="9" fill="#cfe0ae" opacity=".7"/>
+              <path d="M580 222Q710 250 832 226" fill="none" stroke="rgba(43,84,112,.35)" stroke-width="1"/>
+              <path d="M592 224l6 12 7-11zM632 231l6 12 7-11zM672 236l6 12 7-11zM712 237l6 12 7-11zM752 234l6 12 7-11zM792 229l6 12 7-11z" fill="#e46aa6" opacity=".75"/>
+              <path d="M1040 300v-14M1160 300v-14" stroke="#8a6a4a" stroke-width="1.4" opacity=".6"/>
+            </g>
+
+            <g aria-hidden="true">
+              <path d="M0 470C80 430 160 448 240 470C330 494 430 446 540 462C580 468 604 474 620 480L620 560L0 560Z" fill="#d2ccdf" opacity=".8"/>
+              <path d="M0 540C100 504 200 526 300 548C400 570 500 526 620 548L620 620L0 620Z" fill="#c4bcd4" opacity=".7"/>
+              <path d="M76 512l12-24 12 24zM88 512v14M458 532l10-20 10 20zM468 532v12M568 486l9-18 9 18zM576 486v12" fill="#7f9d86" opacity=".7"/>
+              <path d="M28 636C118 620 206 632 294 640C384 648 468 628 566 634" fill="none" stroke="#eee9f4" stroke-width="8" stroke-linecap="round" opacity=".6"/>
+            </g>
+
+            <g aria-hidden="true">
+              <path d="M620 502C720 472 820 502 920 492C1030 480 1120 492 1200 482L1200 620L620 620Z" fill="#e2c9a4" opacity=".6"/>
+              <path d="M632 626h548" stroke="#b08e63" stroke-width="2" opacity=".45" stroke-dasharray="3 9"/>
+              <path d="M648 610q9-12 18 0M700 614q7-10 14 0M1146 606q8-11 16 0M1170 618q7-9 14 0" fill="none" stroke="#9d7b52" stroke-width="1.4" stroke-linecap="round" opacity=".6"/>
+              <path d="M648 560l7-18 7 18zM666 560v10M1168 548l7-18 7 18zM1186 548v10" fill="#b08e63" opacity=".7"/>
+            </g>
+
+            <g aria-hidden="true">
+              <text class="region-label region-label--sky" x="28" y="84">FOUNDRY COAST · SYSTEMS</text>
+              <path class="region-line" d="M28 92h172"/>
+              <text class="region-label region-label--sky" x="1172" y="84" text-anchor="end">ARCADE QUARTER · GAMES</text>
+              <path class="region-line" d="M1002 92h170"/>
+              <text class="region-label" x="300" y="408">OBSERVATORY HILLS · DATA</text>
+              <path class="region-line" d="M300 416h170"/>
+              <text class="region-label" x="1172" y="408" text-anchor="end">MOTOCROSS VALLEY · PLAY</text>
+              <path class="region-line" d="M1002 416h170"/>
+            </g>
+
+            <!-- Foundry coast -->
+
+            <a class="bldg bldg--jerlang" href="../jerlang/" tabindex="0" aria-labelledby="t-jerlang" data-project="jerlang">
+              <title id="t-jerlang">JErlang — an Erlang runtime for the JVM. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="82" cy="334" rx="54" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall" x="42" y="254" width="82" height="78"/>
+                <path class="roof" d="M42 254l21-26v26l21-26v26l21-26v26l21-26v26z"/>
+                <rect class="wall" x="48" y="196" width="13" height="34"/>
+                <rect class="roof-deep" x="45" y="192" width="19" height="5" rx="2"/>
+                <rect class="glass" x="58" y="266" width="28" height="16" rx="2"/>
+                <rect class="glass" x="92" y="266" width="20" height="16" rx="2"/>
+                <rect class="door" x="60" y="308" width="18" height="24" rx="2"/>
+                <circle class="metal" cx="103" cy="300" r="14"/>
+                <circle class="glass-deep" cx="103" cy="300" r="5"/>
+                <path class="stroke" d="M103 286v6M103 308v6M89 300h6M111 300h6M93 290l4 4M109 306l4 4M113 290l-4 4M97 306l-4 4"/>
+                <path class="shine" d="M46 260h74"/>
+                <path class="band" d="M44 324h78"/>
+              </g>
+              <rect class="bldg__ring" x="24" y="184" width="112" height="190" rx="12"/>
+              <text class="bldg__name" x="82" y="365" text-anchor="middle">JErlang</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="8" y="104" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="20" y="121">An Erlang runtime for the JVM — the engine works.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--orders" href="../orders-service/" tabindex="0" aria-labelledby="t-orders" data-project="orders-service">
+              <title id="t-orders">Orders Service — a three-repo reference system. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="205" cy="336" rx="78" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall" x="136" y="254" width="76" height="58"/>
+                <path class="roof" d="M136 254q38-16 76 0v10h-76z"/>
+                <rect class="glass" x="150" y="272" width="22" height="16" rx="2"/>
+                <rect class="glass" x="182" y="272" width="18" height="16" rx="2"/>
+                <rect class="door" x="160" y="292" width="28" height="20" rx="2"/>
+                <path class="shine" d="M140 260h68"/>
+                <rect class="timber" x="212" y="316" width="58" height="5" rx="2"/>
+                <rect class="metal" x="230" y="316" width="3" height="12"/>
+                <rect class="metal" x="264" y="316" width="3" height="15"/>
+                <rect class="timber" x="212" y="334" width="66" height="5" rx="2"/>
+                <rect class="metal" x="226" y="334" width="3" height="12"/>
+                <rect class="metal" x="272" y="334" width="3" height="15"/>
+                <rect class="timber" x="212" y="352" width="52" height="5" rx="2"/>
+                <rect class="metal" x="224" y="352" width="3" height="11"/>
+                <rect class="metal" x="258" y="352" width="3" height="14"/>
+                <path class="boat" d="M240 328h20l-4 7h-12z"/>
+                <path class="sail" d="M250 328v-10l8 10z"/>
+                <path class="boat" d="M250 346h18l-4 6h-10z"/>
+                <path class="sail" d="M258 346v-8l7 8z"/>
+                <path class="boat" d="M238 364h20l-4 7h-12z"/>
+              </g>
+              <rect class="bldg__ring" x="126" y="244" width="170" height="136" rx="12"/>
+              <text class="bldg__name" x="205" y="365" text-anchor="middle">Orders Service</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="8" y="104" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="20" y="121">One orders domain, three repos, three docks.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--morphex" href="../morphex/" tabindex="0" aria-labelledby="t-morphex" data-project="morphex">
+              <title id="t-morphex">Morphex — deterministic English inflection, Java wing. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="328" cy="334" rx="38" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall" x="302" y="184" width="52" height="148"/>
+                <path class="roof" d="M296 184h64l-32-18z"/>
+                <rect class="roof-deep" x="294" y="180" width="68" height="7" rx="2"/>
+                <rect class="stone" x="298" y="316" width="60" height="8"/>
+                <rect class="stone" x="294" y="324" width="68" height="8"/>
+                <rect class="plaque" x="310" y="196" width="36" height="13" rx="6"/>
+                <text class="plaque-text" x="328" y="206" text-anchor="middle">J</text>
+                <path class="glass" d="M312 266v-22a5 5 0 0 1 10 0v22z"/>
+                <path class="glass" d="M327 266v-22a5 5 0 0 1 10 0v22z"/>
+                <path class="glass" d="M342 266v-22a5 5 0 0 1 10 0v22z"/>
+                <rect class="door" x="320" y="300" width="16" height="16" rx="2"/>
+                <path class="shine" d="M306 192h44"/>
+              </g>
+              <rect class="bldg__ring" x="288" y="158" width="80" height="216" rx="12"/>
+              <text class="bldg__name" x="328" y="365" text-anchor="middle">Morphex</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="180" y="104" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="192" y="121">Deterministic English inflection, Java wing.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--morphex-ts" href="../morphex-ts/" tabindex="0" aria-labelledby="t-morphex-ts" data-project="morphex-ts">
+              <title id="t-morphex-ts">Morphex TS — the TypeScript wing of the Morphex library. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="392" cy="334" rx="36" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall" x="366" y="206" width="52" height="126"/>
+                <path class="roof" d="M360 206h64l-8-14h-48z"/>
+                <rect class="roof-deep" x="360" y="202" width="64" height="6" rx="2"/>
+                <rect class="plaque" x="372" y="216" width="40" height="12" rx="6"/>
+                <text class="plaque-text" x="392" y="225" text-anchor="middle">TS</text>
+                <rect class="glass" x="372" y="240" width="8" height="16" rx="1"/>
+                <rect class="glass" x="386" y="240" width="8" height="16" rx="1"/>
+                <rect class="glass" x="400" y="240" width="8" height="16" rx="1"/>
+                <rect class="glass" x="372" y="266" width="8" height="16" rx="1"/>
+                <rect class="glass" x="386" y="266" width="8" height="16" rx="1"/>
+                <rect class="glass" x="400" y="266" width="8" height="16" rx="1"/>
+                <rect class="glass" x="372" y="292" width="8" height="10" rx="1"/>
+                <rect class="glass" x="400" y="292" width="8" height="10" rx="1"/>
+                <rect class="door" x="386" y="310" width="14" height="22" rx="2"/>
+                <path class="shine" d="M370 212h44"/>
+                <path class="stroke" d="M418 202v-16"/>
+                <circle class="accent-pink" cx="418" cy="184" r="2.4"/>
+              </g>
+              <rect class="bldg__ring" x="354" y="182" width="78" height="192" rx="12"/>
+              <text class="bldg__name" x="392" y="365" text-anchor="middle">Morphex TS</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="240" y="104" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="252" y="121">The same library, rebuilt for TypeScript.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--buffy" href="../buffy/" tabindex="0" aria-labelledby="t-buffy" data-project="buffy">
+              <title id="t-buffy">Buffy — a desk pet for your coding agent. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="485" cy="334" rx="48" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall-warm" x="450" y="284" width="70" height="48"/>
+                <path class="roof" d="M440 284l45-32 45 32z"/>
+                <rect class="wall" x="504" y="252" width="9" height="22"/>
+                <rect class="roof-deep" x="501" y="249" width="15" height="4" rx="2"/>
+                <rect class="glass-deep" x="458" y="294" width="26" height="22" rx="3"/>
+                <g>
+                  <ellipse cx="471" cy="310" rx="6" ry="5" fill="#f6d98f" stroke="#6b4f35" stroke-width="1"/>
+                  <path d="M466 305l2-5 3 5zM472 305l3-5 2 5z" fill="#f6d98f" stroke="#6b4f35" stroke-width="1"/>
+                  <circle cx="469" cy="309" r="1" fill="#3a2a1b"/>
+                  <circle cx="473" cy="309" r="1" fill="#3a2a1b"/>
+                </g>
+                <rect class="stone" x="454" y="316" width="34" height="3" rx="1"/>
+                <rect class="soil" x="458" y="318" width="26" height="6" rx="2"/>
+                <circle cx="462" cy="314" r="2" fill="#e46aa6"/>
+                <circle cx="471" cy="313" r="2" fill="#f3c969"/>
+                <circle cx="480" cy="314" r="2" fill="#e46aa6"/>
+                <rect class="door" x="494" y="302" width="14" height="30" rx="2"/>
+                <path class="shine" d="M454 290h26"/>
+              </g>
+              <rect class="bldg__ring" x="436" y="240" width="102" height="134" rx="12"/>
+              <text class="bldg__name" x="485" y="365" text-anchor="middle">Buffy</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="320" y="174" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="332" y="191">A small cottage with a desk pet in the window.</text>
+              </g>
+            </a>
+
+            <!-- Arcade quarter -->
+
+            <a class="bldg bldg--yahtzee" href="../yahtzee/" tabindex="0" aria-labelledby="t-yahtzee" data-project="yahtzee">
+              <title id="t-yahtzee">Yahtzee — exact-probability dice. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="635" cy="343" rx="56" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall-warm" x="588" y="264" width="94" height="76"/>
+                <path class="roof" d="M588 264h94v16h-94z"/>
+                <rect class="gate-stripe" x="600" y="264" width="6" height="16"/>
+                <rect class="gate-stripe" x="622" y="264" width="6" height="16"/>
+                <rect class="gate-stripe" x="644" y="264" width="6" height="16"/>
+                <rect class="gate-stripe" x="666" y="264" width="6" height="16"/>
+                <rect class="glass" x="600" y="290" width="26" height="22" rx="2"/>
+                <rect class="glass" x="642" y="290" width="26" height="22" rx="2"/>
+                <rect class="door" x="618" y="312" width="20" height="28" rx="2"/>
+                <path class="band" d="M590 332h90"/>
+                <g transform="rotate(12 617 235)">
+                  <rect class="dice" x="604" y="222" width="26" height="26" rx="4"/>
+                  <circle class="pip" cx="611" cy="229" r="2.2"/>
+                  <circle class="pip" cx="623" cy="229" r="2.2"/>
+                  <circle class="pip" cx="617" cy="235" r="2.2"/>
+                  <circle class="pip" cx="611" cy="241" r="2.2"/>
+                  <circle class="pip" cx="623" cy="241" r="2.2"/>
+                </g>
+                <g transform="rotate(-9 659 227)">
+                  <rect class="dice" x="646" y="214" width="26" height="26" rx="4"/>
+                  <circle class="pip" cx="653" cy="221" r="2.2"/>
+                  <circle class="pip" cx="665" cy="221" r="2.2"/>
+                  <circle class="pip" cx="659" cy="227" r="2.2"/>
+                </g>
+              </g>
+              <rect class="bldg__ring" x="580" y="204" width="112" height="180" rx="12"/>
+              <text class="bldg__name" x="635" y="377" text-anchor="middle">Yahtzee</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="470" y="126" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="482" y="143">Exact-probability dice, every roll solved.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--blackjack" href="../blackjack/" tabindex="0" aria-labelledby="t-blackjack" data-project="blackjack">
+              <title id="t-blackjack">Blackjack Lab — an exact solver and the table around it. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="772" cy="345" rx="76" ry="6"/>
+              <g class="bldg__art">
+                <path class="roof" d="M706 266q66-26 132 0v12H706z"/>
+                <rect class="gate-stripe" x="724" y="258" width="5" height="16"/>
+                <rect class="gate-stripe" x="756" y="252" width="5" height="20"/>
+                <rect class="gate-stripe" x="788" y="252" width="5" height="20"/>
+                <rect class="gate-stripe" x="818" y="258" width="5" height="16"/>
+                <rect class="plaque" x="716" y="278" width="5" height="64"/>
+                <rect class="plaque" x="756" y="278" width="5" height="64"/>
+                <rect class="plaque" x="796" y="278" width="5" height="64"/>
+                <rect class="plaque" x="826" y="278" width="5" height="64"/>
+                <ellipse class="wall" cx="772" cy="322" rx="34" ry="9"/>
+                <rect class="stone" x="768" y="326" width="8" height="16"/>
+                <g transform="rotate(-8 756 300)">
+                  <rect x="747" y="288" width="18" height="24" rx="2" fill="#ffffff" stroke="#2f5a72" stroke-width="1.2"/>
+                  <text x="756" y="303" text-anchor="middle" fill="#b81b64" font-family="ui-monospace, monospace" font-size="10" font-weight="700">A</text>
+                </g>
+                <g transform="rotate(7 780 298)">
+                  <rect x="771" y="286" width="18" height="24" rx="2" fill="#ffffff" stroke="#2f5a72" stroke-width="1.2"/>
+                  <text x="780" y="301" text-anchor="middle" fill="#17364f" font-family="ui-monospace, monospace" font-size="8" font-weight="700">21</text>
+                </g>
+                <circle cx="742" cy="326" r="3" fill="#e46aa6"/>
+                <circle cx="749" cy="326" r="3" fill="#7fb7dc"/>
+                <circle cx="796" cy="326" r="3" fill="#f3c969"/>
+                <path class="shine" d="M714 274q58-20 116 0"/>
+              </g>
+              <rect class="bldg__ring" x="696" y="232" width="154" height="152" rx="12"/>
+              <text class="bldg__name" x="772" y="377" text-anchor="middle">Blackjack Lab</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="610" y="126" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="622" y="143">A card table that re-derives its own strategy.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--word-chomp" href="../word-chomp/" tabindex="0" aria-labelledby="t-word-chomp" data-project="word-chomp">
+              <title id="t-word-chomp">Word Chomp! — a garden word dig against the clock. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="925" cy="345" rx="78" ry="6"/>
+              <g class="bldg__art">
+                <rect class="plaque" x="856" y="318" width="5" height="18"/>
+                <rect class="plaque" x="874" y="318" width="5" height="18"/>
+                <rect class="plaque" x="892" y="318" width="5" height="18"/>
+                <rect class="plaque" x="910" y="318" width="5" height="18"/>
+                <rect class="plaque" x="928" y="318" width="5" height="18"/>
+                <rect class="plaque" x="946" y="318" width="5" height="18"/>
+                <rect class="plaque" x="964" y="318" width="5" height="18"/>
+                <rect class="plaque" x="982" y="318" width="5" height="18"/>
+                <rect class="plaque" x="852" y="322" width="150" height="4" rx="2"/>
+                <rect class="plaque" x="852" y="330" width="150" height="4" rx="2"/>
+                <ellipse class="hedge" cx="873" cy="310" rx="17" ry="15"/>
+                <ellipse class="hedge" cx="901" cy="306" rx="19" ry="17"/>
+                <ellipse class="hedge" cx="929" cy="312" rx="15" ry="13"/>
+                <rect class="tile" x="862" y="284" width="22" height="22" rx="3"/>
+                <text class="tile-text" x="873" y="299" text-anchor="middle">W</text>
+                <rect class="tile" x="890" y="272" width="22" height="22" rx="3"/>
+                <text class="tile-text" x="901" y="287" text-anchor="middle">O</text>
+                <rect class="tile" x="918" y="284" width="22" height="22" rx="3"/>
+                <text class="tile-text" x="929" y="299" text-anchor="middle">C</text>
+                <path class="stroke" d="M968 334v-28M968 316l-8-6M968 310l7-6"/>
+                <g>
+                  <circle cx="968" cy="278" r="7" fill="#e46aa6" stroke="#2b5570" stroke-width="1"/>
+                  <circle cx="979" cy="286" r="7" fill="#e46aa6" stroke="#2b5570" stroke-width="1"/>
+                  <circle cx="982" cy="298" r="7" fill="#e46aa6" stroke="#2b5570" stroke-width="1"/>
+                  <circle cx="974" cy="307" r="7" fill="#e46aa6" stroke="#2b5570" stroke-width="1"/>
+                  <circle cx="962" cy="307" r="7" fill="#e46aa6" stroke="#2b5570" stroke-width="1"/>
+                  <circle cx="954" cy="298" r="7" fill="#e46aa6" stroke="#2b5570" stroke-width="1"/>
+                  <circle cx="957" cy="286" r="7" fill="#e46aa6" stroke="#2b5570" stroke-width="1"/>
+                  <circle cx="968" cy="292" r="8" fill="#f3c969" stroke="#2b5570" stroke-width="1"/>
+                  <path d="M962 293q6 6 12 0" fill="none" stroke="#6b4f35" stroke-width="1.4" stroke-linecap="round"/>
+                </g>
+                <rect class="soil" x="852" y="334" width="150" height="8" rx="4"/>
+                <circle cx="864" cy="330" r="2.4" fill="#e46aa6"/>
+                <circle cx="886" cy="330" r="2.4" fill="#f3c969"/>
+                <circle cx="944" cy="330" r="2.4" fill="#e46aa6"/>
+                <circle cx="988" cy="330" r="2.4" fill="#f3c969"/>
+              </g>
+              <rect class="bldg__ring" x="846" y="254" width="164" height="130" rx="12"/>
+              <text class="bldg__name" x="925" y="377" text-anchor="middle">Word Chomp!</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="760" y="150" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="772" y="167">A garden word dig against a 2:20 clock.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--boggle" href="../boggle/" tabindex="0" aria-labelledby="t-boggle" data-project="boggle">
+              <title id="t-boggle">Boggle — a word game in a 4×4 grid of letter dice. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="1100" cy="344" rx="64" ry="6"/>
+              <g class="bldg__art">
+                <rect class="roof" x="1038" y="278" width="124" height="16" rx="3"/>
+                <rect class="gate-stripe" x="1044" y="279" width="16" height="14"/>
+                <rect class="gate-stripe" x="1068" y="279" width="16" height="14"/>
+                <rect class="gate-stripe" x="1092" y="279" width="16" height="14"/>
+                <rect class="gate-stripe" x="1116" y="279" width="16" height="14"/>
+                <rect class="gate-stripe" x="1140" y="279" width="16" height="14"/>
+                <rect class="wall-warm" x="1044" y="294" width="112" height="50"/>
+                <path class="shine" d="M1048 298h104"/>
+                <rect class="glass" x="1054" y="307" width="24" height="18" rx="2"/>
+                <path class="stroke" d="M1066 307v18" opacity=".55"/>
+                <rect class="door" x="1087" y="312" width="26" height="32" rx="2"/>
+                <circle cx="1108" cy="329" r="1.6" fill="#f3c969"/>
+                <rect class="glass" x="1122" y="307" width="24" height="18" rx="2"/>
+                <path class="stroke" d="M1134 307v18" opacity=".55"/>
+                <rect class="sign" x="1058" y="226" width="84" height="50" rx="4"/>
+                <text class="sign-text" x="1100" y="244" text-anchor="middle">BOGGLE</text>
+                <rect class="tile" x="1067" y="251" width="14" height="14" rx="2"/>
+                <text class="tile-text" x="1074" y="261" text-anchor="middle">B</text>
+                <rect class="tile" x="1084" y="251" width="14" height="14" rx="2"/>
+                <text class="tile-text" x="1091" y="261" text-anchor="middle">O</text>
+                <rect class="tile" x="1101" y="251" width="14" height="14" rx="2"/>
+                <text class="tile-text" x="1108" y="261" text-anchor="middle">G</text>
+                <rect class="tile" x="1118" y="251" width="14" height="14" rx="2"/>
+                <text class="tile-text" x="1125" y="261" text-anchor="middle">G</text>
+              </g>
+              <rect class="bldg__ring" x="1028" y="198" width="144" height="188" rx="12"/>
+              <text class="bldg__name" x="1100" y="377" text-anchor="middle">Boggle</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="864" y="180" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="876" y="197">Sixteen letter dice, every word you can find.</text>
+              </g>
+            </a>
+
+            <!-- Observatory hills -->
+
+            <a class="bldg bldg--earth-radio" href="../earth-radio/" tabindex="0" aria-labelledby="t-earth-radio" data-project="earth-radio">
+              <title id="t-earth-radio">Earth Radio — one day of earthquakes, played as sound. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="100" cy="624" rx="52" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall" x="54" y="552" width="92" height="68" rx="3"/>
+                <path class="roof" d="M54 552a46 46 0 0 1 92 0z"/>
+                <rect class="glass" x="84" y="508" width="12" height="44" rx="2"/>
+                <rect class="glass" x="64" y="568" width="20" height="14" rx="2"/>
+                <rect class="door" x="92" y="580" width="18" height="40" rx="2"/>
+                <path class="shine" d="M58 606h84"/>
+                <rect class="metal" x="146" y="568" width="5" height="52"/>
+                <g class="dish">
+                  <ellipse class="metal" cx="166" cy="554" rx="24" ry="10" transform="rotate(-24 166 554)"/>
+                  <ellipse class="glass-deep" cx="168" cy="554" rx="16" ry="5.5" transform="rotate(-24 168 554)" opacity=".75"/>
+                  <path class="stroke" d="M148 566l26-18"/>
+                  <circle class="accent" cx="176" cy="545" r="2.4"/>
+                </g>
+                <path class="stroke" d="M192 540a20 20 0 0 1 0 32" opacity=".45"/>
+              </g>
+              <rect class="bldg__ring" x="44" y="494" width="132" height="164" rx="12"/>
+              <text class="bldg__name" x="100" y="650" text-anchor="middle">Earth Radio</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="8" y="414" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="20" y="431">One day of earthquakes, played as sound.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--clt-almanac" href="../clt-almanac/" tabindex="0" aria-labelledby="t-clt-almanac" data-project="clt-almanac">
+              <title id="t-clt-almanac">The Charlotte Almanac — a daily forecast from the station record. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="244" cy="624" rx="42" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall-warm" x="212" y="584" width="64" height="36" rx="2"/>
+                <path class="roof" d="M206 584l38-16 38 16z"/>
+                <rect class="metal" x="241" y="470" width="5" height="114"/>
+                <path class="stroke" d="M224 470h38M241 470v-18M241 470l-19 6M241 470l19 6"/>
+                <circle class="metal" cx="241" cy="451" r="4"/>
+                <circle class="metal" cx="222" cy="476" r="4"/>
+                <circle class="metal" cx="260" cy="476" r="4"/>
+                <circle class="metal" cx="241" cy="470" r="2.4"/>
+                <path class="stroke" d="M243 500l20-7v14z"/>
+                <rect class="glass" x="220" y="596" width="14" height="10" rx="1"/>
+                <rect class="glass" x="252" y="596" width="14" height="10" rx="1"/>
+                <path class="shine" d="M214 620h60"/>
+              </g>
+              <rect class="bldg__ring" x="190" y="440" width="110" height="218" rx="12"/>
+              <text class="bldg__name" x="244" y="650" text-anchor="middle">Charlotte Almanac</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="110" y="414" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="122" y="431">A daily forecast from the Charlotte record.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--murmur" href="../murmur/" tabindex="0" aria-labelledby="t-murmur" data-project="murmur">
+              <title id="t-murmur">Murmur — a small face that reacts to the weather. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="370" cy="624" rx="54" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall-warm" x="322" y="536" width="96" height="84"/>
+                <path class="roof" d="M310 536l60-42 60 42z"/>
+                <rect class="wall" x="350" y="514" width="10" height="24"/>
+                <rect class="roof-deep" x="347" y="511" width="16" height="4" rx="2"/>
+                <rect class="glass-deep" x="340" y="552" width="60" height="46" rx="6"/>
+                <path d="M344 556q8 10 8 38M396 556q-8 10-8 38" fill="none" stroke="#f7fbff" stroke-width="2" opacity=".45"/>
+                <g class="murmur-eyes">
+                  <circle class="eye" cx="358" cy="570" r="5"/>
+                  <circle class="eye" cx="382" cy="570" r="5"/>
+                  <circle class="pupil" cx="359" cy="570" r="1.8"/>
+                  <circle class="pupil" cx="383" cy="570" r="1.8"/>
+                </g>
+                <path class="mouth" d="M360 586q10 7 20 0"/>
+                <circle cx="370" cy="579" r="1.4" fill="#17364f"/>
+                <rect class="stone" x="336" y="598" width="68" height="3" rx="1"/>
+                <rect class="door" x="402" y="588" width="12" height="32" rx="2"/>
+                <path class="shine" d="M326 542h30"/>
+              </g>
+              <rect class="bldg__ring" x="304" y="484" width="136" height="174" rx="12"/>
+              <text class="bldg__name" x="370" y="650" text-anchor="middle">Murmur</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="210" y="438" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="222" y="455">A small face that reacts to the weather.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--what-changed" href="../what-changed/" tabindex="0" aria-labelledby="t-what-changed" data-project="what-changed">
+              <title id="t-what-changed">What Changed Today — a daily ledger of public records. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="508" cy="624" rx="66" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall" x="450" y="492" width="116" height="128"/>
+                <path class="roof" d="M442 492l58-30 58 30z"/>
+                <rect class="roof-deep" x="438" y="488" width="124" height="7" rx="2"/>
+                <rect class="plaque" x="458" y="502" width="8" height="98"/>
+                <rect class="plaque" x="486" y="502" width="8" height="98"/>
+                <rect class="plaque" x="530" y="502" width="8" height="98"/>
+                <rect class="plaque" x="558" y="502" width="8" height="98"/>
+                <rect class="ledger" x="470" y="512" width="76" height="50" rx="3"/>
+                <text class="ledger-text" x="478" y="524">LEDGER · NOV 9</text>
+                <path class="ledger-line" d="M478 530h30M516 530h20M478 537h38M522 537h14M478 544h24M508 544h28"/>
+                <rect class="door" x="496" y="576" width="24" height="44" rx="2"/>
+                <rect class="stone" x="460" y="620" width="96" height="8"/>
+                <rect class="stone" x="452" y="628" width="112" height="5" rx="2"/>
+                <path class="shine" d="M454 498h44"/>
+              </g>
+              <rect class="bldg__ring" x="436" y="450" width="146" height="208" rx="12"/>
+              <text class="bldg__name" x="508" y="650" text-anchor="middle">What Changed Today</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="350" y="404" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="362" y="421">A daily ledger of what actually moved.</text>
+              </g>
+              <g class="bldg__live" aria-hidden="true" data-live-group="what-changed">
+                <rect class="bldg__live-bg" x="350" y="436" width="320" height="18" rx="7"/>
+                <text class="bldg__live-text" x="362" y="449" data-live-text="what-changed"></text>
+              </g>
+            </a>
+
+            <!-- Motocross valley -->
+
+            <a class="bldg bldg--mx-lab" href="../mx-lab/" tabindex="0" aria-labelledby="t-mx-lab" data-project="mx-lab">
+              <title id="t-mx-lab">MX Lab — seven seasons of motocross, measured. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="663" cy="624" rx="48" ry="6"/>
+              <g class="bldg__art">
+                <path class="stroke" d="M646 548v72M684 548v72M646 576h38M646 604h38M646 576l38 28M684 576l-38 28"/>
+                <rect class="glass-deep" x="630" y="508" width="72" height="44" rx="3"/>
+                <rect class="plaque" x="624" y="500" width="84" height="8" rx="2"/>
+                <rect class="glass" x="636" y="518" width="60" height="18" rx="2"/>
+                <rect class="plaque" x="620" y="468" width="92" height="28" rx="3"/>
+                <text class="plaque-text" x="666" y="486" text-anchor="middle">LAP 00:42</text>
+                <path class="stroke" d="M666 468v-18"/>
+                <circle class="accent" cx="666" cy="448" r="2.6"/>
+                <path class="shine" d="M634 512h24"/>
+              </g>
+              <rect class="bldg__ring" x="616" y="438" width="110" height="220" rx="12"/>
+              <text class="bldg__name" x="663" y="650" text-anchor="middle">MX Lab</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="500" y="414" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="512" y="431">Seven seasons of motocross, measured.</text>
+              </g>
+              <g class="bldg__live" aria-hidden="true" data-live-group="mx-lab">
+                <rect class="bldg__live-bg" x="500" y="446" width="320" height="18" rx="7"/>
+                <text class="bldg__live-text" x="512" y="459" data-live-text="mx-lab"></text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--motobuzz" href="../motobuzz/" tabindex="0" aria-labelledby="t-motobuzz" data-project="motobuzz">
+              <title id="t-motobuzz">MotoBuzz — what the sport is talking about, ranked. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="778" cy="624" rx="40" ry="6"/>
+              <g class="bldg__art">
+                <path class="stroke" d="M768 600 780 410M790 600 785 410M770 570h18M772 540h15M774 510h12M776 480h9M778 450h6M772 585l16-15M774 555l12-15M776 525l8-15M778 495l5-15" stroke-width="2.6"/>
+                <rect class="board" x="744" y="470" width="56" height="26" rx="2"/>
+                <rect class="board-bar" x="750" y="477" width="28" height="3" rx="1.5"/>
+                <rect class="board-bar" x="750" y="484" width="38" height="3" rx="1.5"/>
+                <rect class="accent-pink" x="786" y="476" width="7" height="12" rx="1"/>
+                <rect class="board" x="748" y="510" width="48" height="22" rx="2"/>
+                <rect class="board-bar" x="754" y="516" width="24" height="3" rx="1.5"/>
+                <rect class="board-bar" x="754" y="522" width="32" height="3" rx="1.5"/>
+                <path class="stroke" d="M782 410v-20"/>
+                <circle cx="782" cy="386" r="3" fill="#e46aa6" stroke="#2b5570" stroke-width="1"/>
+                <rect class="wall-warm" x="764" y="588" width="32" height="14" rx="2"/>
+                <path class="roof" d="M760 588h40l-5-8h-30z"/>
+              </g>
+              <rect class="bldg__ring" x="734" y="378" width="88" height="280" rx="12"/>
+              <text class="bldg__name" x="778" y="650" text-anchor="middle">MotoBuzz</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="620" y="346" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="632" y="363">What the sport is talking about, ranked.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--saf" href="../saf-explorer/" tabindex="0" aria-labelledby="t-saf" data-project="saf-explorer">
+              <title id="t-saf">SAF Explorer — open, list and pack MX Simulator .saf archives. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="907" cy="624" rx="60" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall" x="858" y="530" width="104" height="90"/>
+                <path class="roof" d="M850 530h120l-10-22H860z"/>
+                <path class="stroke" d="M866 508v22M878 508v22M890 508v22M902 508v22M914 508v22M926 508v22M938 508v22M950 508v22" opacity=".6"/>
+                <rect class="glass" x="872" y="548" width="28" height="20" rx="2"/>
+                <rect class="glass" x="908" y="548" width="28" height="20" rx="2"/>
+                <rect class="door" x="892" y="582" width="36" height="38" rx="2"/>
+                <path class="stroke" d="M892 594h36M892 606h36" opacity=".55"/>
+                <rect class="crate" x="830" y="590" width="22" height="26"/>
+                <rect class="crate" x="832" y="566" width="22" height="22"/>
+                <text class="crate-text" x="843" y="603" text-anchor="middle">.saf</text>
+                <path class="shine" d="M862 536h92"/>
+              </g>
+              <rect class="bldg__ring" x="824" y="506" width="150" height="152" rx="12"/>
+              <text class="bldg__name" x="907" y="650" text-anchor="middle">SAF Explorer</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="860" y="438" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="872" y="455">A crate warehouse for .saf archives.</text>
+              </g>
+            </a>
+
+
+          </svg>
+        </div>
+        <p class="world-scrollhint" aria-hidden="true">Scroll sideways to explore →</p>
+      </div>
+
+      <div class="world-list" aria-label="List view">
+        <section class="world-group" aria-labelledby="region-foundry">
+          <div class="world-group__head">
+            <h3 id="region-foundry">Foundry coast</h3>
+            <span class="world-group__tag">systems</span>
+          </div>
+          <ul class="world-items">
+            <li>
+              <a class="world-item" href="../jerlang/" data-project="jerlang">
+                <span class="world-item__top"><span class="world-item__name">JErlang</span><span class="world-item__path">/jerlang/</span></span>
+                <span class="world-item__caption">An Erlang runtime for the JVM — the engine works.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../orders-service/" data-project="orders-service">
+                <span class="world-item__top"><span class="world-item__name">Orders Service</span><span class="world-item__path">/orders-service/</span></span>
+                <span class="world-item__caption">One orders domain, three repos, three docks.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../morphex/" data-project="morphex">
+                <span class="world-item__top"><span class="world-item__name">Morphex</span><span class="world-item__path">/morphex/</span></span>
+                <span class="world-item__caption">Deterministic English inflection, Java wing.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../morphex-ts/" data-project="morphex-ts">
+                <span class="world-item__top"><span class="world-item__name">Morphex TS</span><span class="world-item__path">/morphex-ts/</span></span>
+                <span class="world-item__caption">The same library, rebuilt for TypeScript.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../buffy/" data-project="buffy">
+                <span class="world-item__top"><span class="world-item__name">Buffy</span><span class="world-item__path">/buffy/</span></span>
+                <span class="world-item__caption">A small cottage with a desk pet in the window.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="world-group" aria-labelledby="region-arcade">
+          <div class="world-group__head">
+            <h3 id="region-arcade">Arcade quarter</h3>
+            <span class="world-group__tag">games</span>
+          </div>
+          <ul class="world-items">
+            <li>
+              <a class="world-item" href="../yahtzee/" data-project="yahtzee">
+                <span class="world-item__top"><span class="world-item__name">Yahtzee</span><span class="world-item__path">/yahtzee/</span></span>
+                <span class="world-item__caption">Exact-probability dice, every roll solved.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../blackjack/" data-project="blackjack">
+                <span class="world-item__top"><span class="world-item__name">Blackjack Lab</span><span class="world-item__path">/blackjack/</span></span>
+                <span class="world-item__caption">A card table that re-derives its own strategy.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../word-chomp/" data-project="word-chomp">
+                <span class="world-item__top"><span class="world-item__name">Word Chomp!</span><span class="world-item__path">/word-chomp/</span></span>
+                <span class="world-item__caption">A garden word dig against a 2:20 clock.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../boggle/" data-project="boggle">
+                <span class="world-item__top"><span class="world-item__name">Boggle</span><span class="world-item__path">/boggle/</span></span>
+                <span class="world-item__caption">Sixteen letter dice, every word you can find.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="world-group" aria-labelledby="region-observatory">
+          <div class="world-group__head">
+            <h3 id="region-observatory">Observatory hills</h3>
+            <span class="world-group__tag">data</span>
+          </div>
+          <ul class="world-items">
+            <li>
+              <a class="world-item" href="../earth-radio/" data-project="earth-radio">
+                <span class="world-item__top"><span class="world-item__name">Earth Radio</span><span class="world-item__path">/earth-radio/</span></span>
+                <span class="world-item__caption">One day of earthquakes, played as sound.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../clt-almanac/" data-project="clt-almanac">
+                <span class="world-item__top"><span class="world-item__name">Charlotte Almanac</span><span class="world-item__path">/clt-almanac/</span></span>
+                <span class="world-item__caption">A daily forecast from the Charlotte record.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../murmur/" data-project="murmur">
+                <span class="world-item__top"><span class="world-item__name">Murmur</span><span class="world-item__path">/murmur/</span></span>
+                <span class="world-item__caption">A small face that reacts to the weather.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../what-changed/" data-project="what-changed">
+                <span class="world-item__top"><span class="world-item__name">What Changed Today</span><span class="world-item__path">/what-changed/</span></span>
+                <span class="world-item__caption">A daily ledger of what actually moved.</span>
+                <span class="world-item__live" data-live-for="what-changed" hidden></span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="world-group" aria-labelledby="region-motocross">
+          <div class="world-group__head">
+            <h3 id="region-motocross">Motocross valley</h3>
+            <span class="world-group__tag">play</span>
+          </div>
+          <ul class="world-items">
+            <li>
+              <a class="world-item" href="../mx-lab/" data-project="mx-lab">
+                <span class="world-item__top"><span class="world-item__name">MX Lab</span><span class="world-item__path">/mx-lab/</span></span>
+                <span class="world-item__caption">Seven seasons of motocross, measured.</span>
+                <span class="world-item__live" data-live-for="mx-lab" hidden></span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../motobuzz/" data-project="motobuzz">
+                <span class="world-item__top"><span class="world-item__name">MotoBuzz</span><span class="world-item__path">/motobuzz/</span></span>
+                <span class="world-item__caption">What the sport is talking about, ranked.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../saf-explorer/" data-project="saf-explorer">
+                <span class="world-item__top"><span class="world-item__name">SAF Explorer</span><span class="world-item__path">/saf-explorer/</span></span>
+                <span class="world-item__caption">A crate warehouse for .saf archives.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+
+    <p class="world-note">Sixteen projects across four regions. Adding a project means one SVG
+      group and one list entry — the map is hand-drawn, not generated.</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__inner">
+      <p class="footer__brand">Justin Baker · Charlotte, NC</p>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="../#expertise">Expertise</a>
+        <a href="../#about">About</a>
+        <a href="../projects/">Projects</a>
+        <a href="./" aria-current="page">My world</a>
+        <a href="../#contact">Contact</a>
+        <a href="https://github.com/slayyyyer" target="_blank" rel="noopener">GitHub</a>
+        <a href="#top">Back to top ↑</a>
+      </nav>
+    </div>
+    <div class="footer__fine">
+      <p>© 2026 Justin Baker. Hand-built with plain HTML, CSS and a small parallax script.</p>
+      <p>The gloss is an affectionate nod to Mac OS X Aqua. Not affiliated with Apple.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+<script src="world.js"></script>
+</body>
+</html>
