@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects — Justin Baker</title>
-<meta name="description" content="The full collection: fourteen live experiments — an Erlang runtime for the JVM, a deterministic English inflection library, two exact-probability games, Charlotte weather and records projects, and motocross tooling.">
+<meta name="description" content="The full collection: sixteen live experiments — an Erlang runtime for the JVM, deterministic English inflection, English↔French translation, an exact Boggle solver, exact-probability games, Charlotte data projects and motocross tooling.">
 <link rel="canonical" href="https://slayyyyer.github.io/projects/">
 <meta property="og:title" content="Projects — Justin Baker">
-<meta property="og:description" content="Fourteen live experiments: systems, browser games, Charlotte data projects and motocross tooling.">
+<meta property="og:description" content="Sixteen live experiments: systems, language and translation, browser games, Charlotte data projects and motocross tooling.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://slayyyyer.github.io/projects/">
 <meta property="og:site_name" content="Justin Baker">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Justin Baker — big systems, small details. Principal engineer, Charlotte, NC.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projects — Justin Baker">
-<meta name="twitter:description" content="Fourteen live experiments: systems, browser games, Charlotte data projects and motocross tooling.">
+<meta name="twitter:description" content="Sixteen live experiments: systems, language and translation, browser games, Charlotte data projects and motocross tooling.">
 <meta name="twitter:image" content="https://slayyyyer.github.io/og.png">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#e6f4ff">
@@ -72,7 +72,7 @@
         <p class="label">All projects</p>
         <h1>Everything I built for the fun of it.</h1>
       </div>
-      <p class="sectionhead__sub">Fourteen live experiments, each its own repository and its own
+      <p class="sectionhead__sub">Sixteen live experiments, each its own repository and its own
         subpath on this domain — the three from the homepage first.</p>
     </div>
 
@@ -128,6 +128,18 @@
         <ul class="stack"><li>Java 17</li><li>147k lexicon</li><li>JMH</li></ul>
       </a>
 
+      <a class="projectcard projectcard--wide" href="https://slayyyyer.github.io/transcend/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/transcend/</p>
+        <h3>Transcend: English↔French from scratch</h3>
+        <p class="projectcard__copy">A reproducible translation pipeline with a byte-level BPE
+          tokenizer and a hand-written Transformer trained from scratch, exported to ONNX and run
+          offline by a Java 17 library that verifies every package checksum. The training, parity
+          and benchmark records are published, with the translation quality clearly labelled
+          pilot-level.</p>
+        <ul class="stack"><li>PyTorch</li><li>ONNX</li><li>Java 17</li></ul>
+      </a>
+
       <a class="projectcard" href="https://slayyyyer.github.io/yahtzee/">
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/yahtzee/</p>
@@ -156,6 +168,18 @@
           out. Vanilla HTML, CSS and JavaScript in one folder — no build step, no network request,
           original art and sound.</p>
         <ul class="stack"><li>Word game</li><li>Vanilla JS</li><li>No build step</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://slayyyyer.github.io/boggle/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/boggle/</p>
+        <h3>Boggle Lab</h3>
+        <p class="projectcard__copy">A 4×4 Boggle game backed by a complete solver: every word,
+          every legal path and the board’s exact maximum score are computed, not sampled. Race a
+          CPU that changes its risk near the clock, or use the board lab to sample random boards
+          and hill-climb a high scorer. Vanilla HTML, CSS and JavaScript in one folder — no build
+          step, no backend, no network request after the word list loads.</p>
+        <ul class="stack"><li>Game</li><li>Exact solver</li><li>Vanilla JS</li></ul>
       </a>
 
       <a class="projectcard" href="https://slayyyyer.github.io/earth-radio/">
