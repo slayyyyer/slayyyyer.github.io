@@ -1325,8 +1325,7 @@ body.is-scrolled .scrollcue {
 @media (max-width: 520px) {
   .nav a { padding: 8px 6px; font-size: 12px; }
 
-  .nav a.nav__sm-hide,
-  .nav a.nav__xs-hide { display: none; }
+  .nav a.nav__sm-hide { display: none; }
   .brand span:last-child { font-size: 12px; }
 
   .hero__meta {
