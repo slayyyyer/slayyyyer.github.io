@@ -1,8 +1,9 @@
 # slayyyyer.github.io
 
-A two-page personal site: the homepage and a `/projects/` collection page, both a bright, layered
-“Aqua” desktop with scroll and pointer parallax. Plain HTML, CSS and a small vanilla script — no
-dependencies and no build step. The only image is `og.png`, the 1200×630 social preview card.
+A three-page personal site: the homepage, a `/projects/` collection page and an illustrated
+`/world/` map, all a bright, layered “Aqua” desktop with scroll and pointer parallax. Plain HTML,
+CSS and a small vanilla script — no dependencies and no build step. The only image is `og.png`,
+the 1200×630 social preview card.
 
 ## Preview locally
 
@@ -65,6 +66,25 @@ Notes:
   left from; its `href` still points at the homepage for a cold arrival, a new tab or a
   modified click.
 
+## The world page
+
+`/world/` is one static page with an inline SVG map and a grouped list fallback. Four regions
+hold sixteen linked buildings: Foundry coast (systems), Arcade quarter (games), Observatory
+hills (data) and Motocross valley (play). The Boggle booth at the end of the Arcade quarter links to
+`/boggle/`.
+
+- The map links work with JavaScript disabled. The list is the default below 700px; wide screens
+  get the map. JavaScript only adds the Map/List toggle, the local-time sky, the dish scan, the
+  blink and two optional live lines.
+- `prefers-reduced-motion: reduce` stops the dish and the blink. The site is light-only, so there
+  is no dark colour scheme.
+- A new project means one SVG group inside `world/index.html` plus one entry in the matching
+  `.world-items` list. Use the same `<a>` structure, a unique `<title>` id and a caption.
+- Two live lines are wired, both same-origin and both optional:
+  `/what-changed/data/today.json` and `/mx-lab/data/meta.json`. The script times out after four
+  seconds, shows nothing on a first failure and marks a cached value `stale` after one.
+- The world page also includes `morphex-ts`, a newer project not yet in the collection page.
+
 ## Editing
 
 | What | Where |
@@ -76,6 +96,9 @@ Notes:
 | Colours, glass, type, layout | `assets/site.css` (`:root` holds the palette) |
 | Parallax speeds | `data-speed` / `data-mouse` attributes in `index.html` |
 | Parallax and scroll-cue behaviour | `assets/site.js` |
+| World map, buildings and captions | `world/index.html` |
+| World view toggle, local-time sky and live details | `world/world.js` |
+| World page styling | `.world-*` and the map classes at the end of `assets/site.css` |
 | Share card | `og.png` (1200×630, referenced from the `og:image` / `twitter:image` tags) |
 
 The contact address appears in the About spec sheet and the contact section. Search for
