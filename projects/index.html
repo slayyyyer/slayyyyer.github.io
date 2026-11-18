@@ -86,7 +86,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/jerlang/</p>
         <h3>An Erlang runtime for the JVM</h3>
-        <p class="projectcard__copy">OTP’s own gen_server and supervisor run unmodified on the JVM, and beams from erlc load unchanged — a runtime that compiles Erlang source to BEAM and interprets it in Java. Built solo: the compiler, interpreter, processes, message passing, links, monitors, distribution and Java interop; published on Maven Central.</p>
+        <p class="projectcard__copy">Compiles Erlang source to BEAM and interprets it on the JVM, so OTP’s own gen_server and supervisor run unmodified — a working prototype, not production software. Built solo: the compiler, interpreter, process model, distribution and Java interop; published on Maven Central.</p>
         <ul class="stack"><li>Java 21</li><li>BEAM</li><li>OTP 29</li></ul>
       </a>
 
@@ -94,7 +94,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/orders-service/</p>
         <h3>A three-repo reference system</h3>
-        <p class="projectcard__copy">One orders domain, recorded from a single CI run: a Spring Boot 4 API with REST and GraphQL over Postgres 16, an RFC 9457 error model, a transactional outbox and six zero-downtime migrations measured against a busy writer, plus a GCP reference platform whose Terraform is verified against a mock provider and never applied. Built solo, across all three repositories.</p>
+        <p class="projectcard__copy">One orders domain, built solo across three repositories: an API with REST and GraphQL over Postgres 16, six zero-downtime migrations measured against a busy writer, and a GCP reference platform with Terraform verified against a mock provider, never applied. Recorded from one CI run, not a live demo.</p>
         <ul class="stack"><li>Spring Boot 4</li><li>Postgres 16</li><li>Terraform</li></ul>
       </a>
 
@@ -102,7 +102,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/buffy/</p>
         <h3>A desk companion for your coding agent</h3>
-        <p class="projectcard__copy">Shipped for Windows, macOS and Linux: agent events become an always-on-top overlay, state stays in ~/.buffy, and no telemetry is collected. Built solo: the desktop app, loopback daemon, CLI, repo watcher, hooks for Claude Code, Gemini CLI, Cursor and Freebuff, and the Windows installer that ships the app and its daemon together.</p>
+        <p class="projectcard__copy">Shipped for Windows, macOS and Linux: agent activity becomes an always-on-top overlay. No telemetry. Built solo: the overlay, local daemon, CLI, hooks for Claude Code, Gemini CLI, Cursor and Freebuff, and the installers.</p>
         <ul class="stack"><li>Electron</li><li>Node CLI</li><li>Local daemon</li></ul>
       </a>
 
@@ -110,7 +110,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/morphex/</p>
         <h3>Pluralize English nouns, deterministically</h3>
-        <p class="projectcard__copy">Exact on the frozen 36,241-word set where stock lands at 96.5%, and published on Maven Central. Scope: a Java 17 library in the spirit of evo-inflector — a 147,338-entry auditable lexicon, three productive spelling rules and a first-match-wins precedence, with an analyze API that names the layer that chose a form and the alternatives. No dependencies, network calls or model downloads; MIT code over CC BY-SA 3.0 data.</p>
+        <p class="projectcard__copy">Exact on the frozen 36,241-word set where stock lands at 96.5%. Scope: a Java 17 library — a 147,338-entry auditable lexicon, three productive spelling rules and a first-match-wins precedence, with a diagnostic API that says why a form was chosen. No dependencies, network calls or model downloads; MIT code over CC BY-SA 3.0 data.</p>
         <ul class="stack"><li>Java 17</li><li>147k lexicon</li><li>JMH</li></ul>
       </a>
 
@@ -118,7 +118,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/transcend/</p>
         <h3>Transcend: English↔French from scratch</h3>
-        <p class="projectcard__copy">A pilot-level English↔French translator that runs offline and verifies every package checksum, with the training, parity and benchmark records published. Scope: a reproducible pipeline — a byte-level BPE tokenizer, a hand-written Transformer trained from scratch, an ONNX export and a Java 17 runtime.</p>
+        <p class="projectcard__copy">A pilot-level English↔French translator: the 800M-token run improves every newstest2014 comparison against the preserved 350M checkpoint, and the training method, ablation and caveats are published. Scope: the training runs, the benchmark report, and a Windows app that runs the model on-device with no Python and no network after install.</p>
         <ul class="stack"><li>PyTorch</li><li>ONNX</li><li>Java 17</li></ul>
       </a>
 
@@ -142,7 +142,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/word-chomp/</p>
         <h3>Word Chomp!</h3>
-        <p class="projectcard__copy">Unscramble six- or seven-letter racks, find the three-to-seven-letter words and clear every garden word before the 2:20 timer runs out. Scope: vanilla HTML, CSS and JavaScript in one folder — no build step, no network request, original art and sound.</p>
+        <p class="projectcard__copy">Unscramble a six- or seven-letter rack, find the three-to-seven-letter words and clear every garden word before the 2:20 timer runs out. Scope: the word lists, the scoring and the round timer.</p>
         <ul class="stack"><li>Word game</li><li>Vanilla JS</li><li>No build step</li></ul>
       </a>
 
@@ -150,7 +150,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/boggle/</p>
         <h3>Boggle Lab</h3>
-        <p class="projectcard__copy">A 4×4 Boggle game backed by a solver that computes every word, every legal path and the board’s exact maximum score rather than sampling them — race a CPU whose risk changes near the clock, or hill-climb a high scorer in the board lab. Scope: vanilla HTML, CSS and JavaScript in one folder — no build step, no backend, no network request after the word list loads.</p>
+        <p class="projectcard__copy">A 4×4 Boggle game backed by a solver that computes every word, every legal path and the board’s exact maximum score rather than sampling them — race a CPU whose risk changes near the clock, or hill-climb a high scorer in the board lab. Scope: vanilla HTML, CSS and JavaScript — no framework, no build step, no server.</p>
         <ul class="stack"><li>Game</li><li>Exact solver</li><li>Vanilla JS</li></ul>
       </a>
 
@@ -158,7 +158,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/earth-radio/</p>
         <h3>Earth Radio: one day of the planet, in sound</h3>
-        <p class="projectcard__copy">A single UTC day of real USGS earthquakes, magnitude 2.5 and up, becomes a 90-second ambient piece: longitude sets stereo position, depth sets a quantized pitch in D minor pentatonic, magnitude sets gain and envelope. Scope: a browser piece synthesized with the Web Audio API — no samples, keys or backend.</p>
+        <p class="projectcard__copy">A single UTC day of real USGS earthquakes, magnitude 2.5 and up, becomes a 90-second ambient piece: longitude places it in the stereo field, depth sets the pitch in D minor pentatonic, and magnitude sets the loudness. Scope: a browser instrument — no samples, no backend.</p>
         <ul class="stack"><li>Web Audio</li><li>Leaflet</li><li>USGS feed</li></ul>
       </a>
 
@@ -174,7 +174,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/murmur/</p>
         <h3>Murmur</h3>
-        <p class="projectcard__copy">A small animated face in Charlotte that reacts to weather, air quality, official alerts, river levels and earthquakes — a simulated mood, not a real one. Scope: the character and the live feeds behind it.</p>
+        <p class="projectcard__copy">A small animated face in Charlotte that reacts to weather, air quality, alerts, river levels and earthquakes — a simulated mood, not a real one. Scope: the character and the live feeds behind it.</p>
         <ul class="stack"><li>Live feeds</li><li>Character</li></ul>
       </a>
 
@@ -190,7 +190,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/mx-lab/</p>
         <h3>MX Lab: seven seasons, measured</h3>
-        <p class="projectcard__copy">Seven seasons of AMA Pro Motocross and Supercross — 195 events, 17,434 result rows and 250,699 lap times — with six analyses published on top: lap chart, fade, lap one, qualifying, titles and an Elo rating per class. Scope: the committed dataset and its build — byte-identical rebuilds, a gate that fails on contradictions, and warnings that each name their sheet. Unofficial, derived statistics only; no source PDFs stored or served.</p>
+        <p class="projectcard__copy">Seven seasons of AMA Pro Motocross and Supercross, every moto of every round, with six analyses published on top: lap chart, fade, lap one, qualifying, titles and an Elo rating per class. Scope: the committed dataset and its build — byte-identical rebuilds, a gate that fails the build on parser errors, and warnings that name the sheet. Unofficial, derived statistics only; no source PDFs stored or served.</p>
         <ul class="stack"><li>Node</li><li>Dataset</li><li>Static site</li></ul>
       </a>
 
@@ -198,7 +198,7 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/motobuzz/</p>
         <h3>MotoBuzz</h3>
-        <p class="projectcard__copy">Ranks what the sport is actually talking about from public motocross news, subreddits and rider and brand channels, refreshed once an hour. Scope: the hourly collection and the ranking.</p>
+        <p class="projectcard__copy">Ranks what the motocross world is talking about from public news and social sources, refreshed once an hour. Scope: the hourly collection and the ranking.</p>
         <ul class="stack"><li>Ranking</li><li>Hourly</li></ul>
       </a>
 
