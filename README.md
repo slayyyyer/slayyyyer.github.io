@@ -1,9 +1,9 @@
 # slayyyyer.github.io
 
-A three-page personal site: the homepage, a `/projects/` collection page and an illustrated
+A static personal site: the homepage, a `/projects/` collection page and an illustrated
 `/world/` map, all a bright, layered “Aqua” desktop with scroll and pointer parallax. Plain HTML,
-CSS and a small vanilla script — no dependencies and no build step. The only image is `og.png`,
-the 1200×630 social preview card.
+CSS and a small vanilla script — no dependencies and no build step. The only raster art is the share card `og.png`
+(1200×630), plus the favicon, touch icon and web-manifest icons in the root.
 
 ## Preview locally
 
@@ -47,8 +47,9 @@ Notes:
 - On GitHub Free, Pages for a user site needs the repository to be public.
 - A root site coexists with project sites: a repo like `saf-explorer` can still publish at
   `https://slayyyyer.github.io/saf-explorer/`.
-- Keep asset paths relative (as they are now) so the page also works from the filesystem
-  and from any subpath.
+- Asset paths stay relative so a page also works from the filesystem; links to the project
+  sites are root-relative (`/jerlang/`) so they survive a custom domain, while `canonical` and
+  `og:image` stay absolute.
 - No `.nojekyll` is needed: there are no underscore-prefixed folders here.
 
 ## How the parallax works
@@ -83,7 +84,6 @@ hills (data) and Motocross valley (play). The Boggle booth at the end of the Arc
 - Two live lines are wired, both same-origin and both optional:
   `/what-changed/data/today.json` and `/mx-lab/data/meta.json`. The script times out after four
   seconds, shows nothing on a first failure and marks a cached value `stale` after one.
-- The world page also includes `morphex-ts`, a newer project not yet in the collection page.
 
 ## Editing
 
@@ -115,9 +115,11 @@ homepage's `#projects` section shows the first three):
 | Three-repo reference system | <https://slayyyyer.github.io/orders-service/> · <https://slayyyyer.github.io/migration-lab/> · <https://slayyyyer.github.io/gcp-reference-platform/> |
 | Buffy | <https://slayyyyer.github.io/buffy/> |
 | Morphex (english-inflector) | <https://slayyyyer.github.io/morphex/> |
+| Transcend | <https://slayyyyer.github.io/transcend/> |
 | Yahtzee | <https://slayyyyer.github.io/yahtzee/> |
 | Blackjack Lab | <https://slayyyyer.github.io/blackjack/> |
 | Word Chomp! | <https://slayyyyer.github.io/word-chomp/> |
+| Boggle Lab | <https://slayyyyer.github.io/boggle/> |
 | Earth Radio | <https://slayyyyer.github.io/earth-radio/> |
 | The Charlotte Almanac | <https://slayyyyer.github.io/clt-almanac/> |
 | Murmur | <https://slayyyyer.github.io/murmur/> |
@@ -131,8 +133,8 @@ means adding its card to `projects/index.html` and a row here — and to `index.
 should be one of the three featured cards. The cards run in thematic runs — systems and tooling, then play, then Charlotte, then motocross — and because they flow
 two-up, each pair is a theme too: the two exact games, then two browser-only pieces, then the
 city's weather face beside its record diff, then motocross news beside its archive tool. The
-six `projectcard--wide` cards span both columns at the head and inside those runs, so keep
-the count of ordinary cards even.
+three `projectcard--wide` cards are the homepage's featured trio; the collection page's sixteen
+cards flow two-up, so keep that count even.
 
 The homepage's header and footer `Projects` links go to `projects/`; its own `#projects` anchor is
 kept so existing links still land on the three featured cards.
