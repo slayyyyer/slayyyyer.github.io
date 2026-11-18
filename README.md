@@ -99,6 +99,7 @@ hills (data) and Motocross valley (play). The Boggle booth at the end of the Arc
 | World map, buildings and captions | `world/index.html` |
 | World view toggle, local-time sky and live details | `world/world.js` |
 | World page styling | `.world-*` and the map classes at the end of `assets/site.css` |
+| Last-code-push dates | typed into `index.html`, `#projects`; the heading records the day they were checked |
 | Share card | `og.png` (1200×630, referenced from the `og:image` / `twitter:image` tags) |
 
 The contact address appears in the About spec sheet and the contact section. Search for
