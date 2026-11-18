@@ -1123,6 +1123,7 @@ body.is-scrolled .scrollcue {
 
 .contact .label { justify-content: center; }
 
+.contact h1,
 .contact h2 {
   max-width: 16ch;
   margin: 16px auto 0;
@@ -1155,6 +1156,34 @@ body.is-scrolled .scrollcue {
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: .06em;
+}
+
+/* ---------- 404 ---------- */
+
+.notfound { padding: 84px 0 150px; }
+
+.notfound__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 22px;
+  margin-top: 26px;
+}
+
+.notfound__links a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(10, 111, 194, .25);
+  color: #22688f;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.notfound__links a:hover {
+  border-bottom-color: #0a6fc2;
+  color: #0a3a63;
 }
 
 /* ---------- footer ---------- */
