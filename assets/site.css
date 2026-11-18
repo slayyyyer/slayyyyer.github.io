@@ -1352,7 +1352,7 @@ body.is-scrolled .scrollcue {
 }
 
 @media (max-width: 520px) {
-  .nav a { padding: 8px 6px; font-size: 12px; }
+  .nav a { padding: 8px 5px; font-size: 12px; }
 
   .nav a.nav__sm-hide { display: none; }
   .brand span:last-child { font-size: 12px; }
@@ -1380,6 +1380,14 @@ body.is-scrolled .scrollcue {
   .specs > div:last-child { border-bottom: 0; }
 
   .contact h2 { max-width: 12ch; }
+}
+
+@media (max-width: 400px) {
+  .brand__mark { display: none; }
+}
+
+@media (max-width: 340px) {
+  .nav a { padding: 8px 3px; }
 }
 
 @media (max-width: 344px) {
