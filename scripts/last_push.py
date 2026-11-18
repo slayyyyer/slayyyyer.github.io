@@ -3,6 +3,8 @@
 
 Reads the pushed_at timestamp of each listed project, keeps the five most
 recent, and rewrites the block between the lastpush markers in index.html.
+Rows stay ordered by the actual instant of the push; the date shown is
+Charlotte local time, so an evening push does not read as the next day.
 Run by .github/workflows/last-push.yml once a day; exits non-zero without
 touching the file if GitHub cannot be reached, so a failure is visible
 instead of silently freezing the panel.
@@ -15,7 +17,15 @@ import json
 import os
 import sys
 import urllib.request
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+try:
+    from zoneinfo import ZoneInfo
+
+    EASTERN = ZoneInfo("America/New_York")
+except Exception:  # Windows builds without the tzdata package
+    EASTERN = None
 
 OWNER = "slayyyyer"
 INDEX = Path(__file__).resolve().parent.parent / "index.html"
@@ -68,9 +78,28 @@ def fetch_pushed_at() -> dict[str, str]:
     return pushed
 
 
-def display_date(iso: str) -> str:
-    year, month, day = iso[:10].split("-")
-    return f"{int(day)} {MONTHS[int(month) - 1]} {year}"
+def _eastern_offset(moment: datetime) -> timedelta:
+    """US Eastern offset, used when no system tz database is installed."""
+    year = moment.year
+
+    def nth_sunday(month: int, n: int) -> datetime:
+        first = datetime(year, month, 1, tzinfo=timezone.utc)
+        return first + timedelta(days=(6 - first.weekday()) % 7 + 7 * (n - 1))
+
+    starts = nth_sunday(3, 2).replace(hour=7)  # 02:00 EST
+    ends = nth_sunday(11, 1).replace(hour=6)  # 02:00 EDT
+    return timedelta(hours=-4 if starts <= moment < ends else -5)
+
+
+def local_time(iso: str) -> datetime:
+    moment = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    if EASTERN is not None:
+        return moment.astimezone(EASTERN)
+    return moment.astimezone(timezone(_eastern_offset(moment)))
+
+
+def display_date(when: datetime) -> str:
+    return f"{when.day} {MONTHS[when.month - 1]} {when.year}"
 
 
 def render(pushed: dict[str, str]) -> str:
@@ -81,10 +110,10 @@ def render(pushed: dict[str, str]) -> str:
         '      <ul class="recent__list">',
     ]
     for repo, href, label, blurb in rows:
-        iso = pushed[repo]
+        when = local_time(pushed[repo])
         lines += [
             "        <li>",
-            f'          <time class="recent__when" datetime="{iso[:10]}">{display_date(iso)}</time>',
+            f'          <time class="recent__when" datetime="{when:%Y-%m-%d}">{display_date(when)}</time>',
             f'          <a href="{href}">{html.escape(label)}</a>',
             f'          <span class="recent__what">{html.escape(blurb)}</span>',
             "        </li>",
