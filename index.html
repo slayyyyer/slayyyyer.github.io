@@ -300,8 +300,8 @@
         <p class="label">03 / Projects</p>
         <h2>Selected projects</h2>
       </div>
-      <p class="sectionhead__sub">Three of the sixteen, each its own repository and its own
-        subpath on this domain — the rest are on the projects page.</p>
+      <p class="sectionhead__sub">Three of the sixteen, each on its own subpath of this
+        domain — the rest are on the projects page.</p>
     </div>
 
     <div class="projectgrid">
@@ -310,10 +310,10 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/jerlang/</p>
         <h3>An Erlang runtime for the JVM</h3>
-        <p class="projectcard__copy">Reads the BEAM files the Erlang compiler produces and
-          interprets them on the JVM — processes, message passing, links, monitors and
-          distribution in Java, one reflective call away from Java code — so OTP’s own gen_server
-          and supervisor run unmodified. Published on Maven Central.</p>
+        <p class="projectcard__copy">Compiles Erlang source to BEAM and interprets it on the JVM,
+          so OTP’s own gen_server and supervisor run unmodified — a working prototype, not
+          production software. Built solo: the compiler, interpreter, process model,
+          distribution and Java interop; published on Maven Central.</p>
         <ul class="stack"><li>Java 21</li><li>BEAM</li><li>OTP 29</li></ul>
       </a>
 
@@ -321,10 +321,10 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/orders-service/</p>
         <h3>A three-repo reference system</h3>
-        <p class="projectcard__copy">One orders domain across three repositories: a Spring Boot 4
-          and Java 21 API with REST and GraphQL over Postgres 16, six zero-downtime migrations
-          measured against a busy writer, and Terraform verified against a mock provider —
-          recorded by CI rather than run as a live demo.</p>
+        <p class="projectcard__copy">One orders domain, built solo across three repositories: an
+          API with REST and GraphQL over Postgres 16, six zero-downtime migrations measured
+          against a busy writer, and a GCP reference platform with Terraform verified against a
+          mock provider, never applied. Recorded from one CI run, not a live demo.</p>
         <ul class="stack"><li>Spring Boot 4</li><li>Postgres 16</li><li>Terraform</li></ul>
       </a>
 
@@ -332,10 +332,9 @@
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/buffy/</p>
         <h3>A desk companion for your coding agent</h3>
-        <p class="projectcard__copy">A tiny always-on-top companion for long coding sessions:
-          Claude Code hooks, a repo watcher and a buffy CLI send thinking, working, needs-you and
-          done to a loopback-only daemon, and an Electron overlay draws her. No telemetry, and
-          the Windows installer ships the app and its daemon together.</p>
+        <p class="projectcard__copy">Shipped for Windows, macOS and Linux: agent activity becomes
+          an always-on-top overlay. No telemetry. Built solo: the overlay, loopback daemon, CLI,
+          hooks for Claude Code, Gemini CLI, Cursor and Freebuff, and the installers.</p>
         <ul class="stack"><li>Electron</li><li>Node CLI</li><li>Local daemon</li></ul>
       </a>
 
