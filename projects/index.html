@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects — Justin Baker</title>
-<meta name="description" content="The full collection: eighteen live experiments — an Erlang runtime for the JVM, a J interpreter in TypeScript, deterministic English inflection, English↔French translation, an exact Boggle solver, exact-probability games, a 33-act fan-made digital circus, Charlotte data projects and motocross tooling.">
+<meta name="description" content="The full collection: nineteen live experiments — an Erlang runtime for the JVM, a page language for the JVM, a J interpreter in TypeScript, deterministic English inflection, English↔French translation, an exact Boggle solver, exact-probability games, a 33-act fan-made digital circus, Charlotte data projects and motocross tooling.">
 <link rel="canonical" href="https://slayyyyer.github.io/projects/">
 <meta property="og:title" content="Projects — Justin Baker">
-<meta property="og:description" content="Eighteen live experiments: systems, language and translation, browser games, a fan-made digital circus, Charlotte data projects and motocross tooling.">
+<meta property="og:description" content="Nineteen live experiments: systems, two languages and a translator, browser games, a fan-made digital circus, Charlotte data projects and motocross tooling.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://slayyyyer.github.io/projects/">
 <meta property="og:site_name" content="Justin Baker">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Justin Baker — big systems, small details. Principal engineer, Charlotte, NC.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projects — Justin Baker">
-<meta name="twitter:description" content="Eighteen live experiments: systems, language and translation, browser games, a fan-made digital circus, Charlotte data projects and motocross tooling.">
+<meta name="twitter:description" content="Nineteen live experiments: systems, two languages and a translator, browser games, a fan-made digital circus, Charlotte data projects and motocross tooling.">
 <meta name="twitter:image" content="https://slayyyyer.github.io/og.png">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#e6f4ff">
@@ -76,7 +76,7 @@
         <p class="label">All projects</p>
         <h1>Everything I built for the fun of it.</h1>
       </div>
-      <p class="sectionhead__sub">Eighteen live experiments, each on its own subpath of this domain —
+      <p class="sectionhead__sub">Nineteen live experiments, each on its own subpath of this domain —
         the three from the homepage first.</p>
     </div>
 
@@ -242,6 +242,15 @@
         <img class="projectcard__shot" src="shots/j.webp" width="960" height="600" alt="The j.ts playground: a J session holding i. 3 4 as a 3×4 table, a sum of each row giving 6 22 38, and a mean of 2.5, beside the list of runnable examples." loading="lazy">
         <p class="projectcard__copy">A practical subset of J — no operator precedence, every value an array — evaluated by an interpreter written from scratch in TypeScript and run entirely in the browser. Scope: the array model with exact rationals and complex numbers, rank, adverbs, trains, explicit definitions, sparse storage and J’s display format, behind a REPL that survives a reload and a ten-part guide whose examples all run. Ported from the Java interpreter in the same repository; no runtime dependencies, and Vite only builds the page.</p>
         <ul class="stack"><li>TypeScript</li><li>J subset</li><li>No runtime deps</li></ul>
+      </a>
+
+      <a class="projectcard projectcard--wide" href="/why-lang/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">/why-lang/</p>
+        <h3>Drop a file, hit its URL, it runs</h3>
+        <img class="projectcard__shot" src="shots/why.webp" width="960" height="600" alt="The Why homepage: “Drop a file. Hit its URL. It runs.” beside a site/index.why page — imports, controller and view — rendering a Latest posts list at localhost:8080." loading="lazy">
+        <p class="projectcard__copy">A small page language for the JVM: a page is a <code>.why</code> file in a folder, and the server compiles it on request — no router, no build step, no framework, one jar and a directory. Scope: imports, controller and view sections in a single file; mustaches that evaluate real Ruby-flavoured expressions, escaped by default; SQLite with bound parameters; <code>file:line</code> errors with a caret and did-you-mean hints; and <code>why check</code>, which compiles every page and prints a page map before you serve it. A proof of concept, deliberately small.</p>
+        <ul class="stack"><li>Java 21 · JVM</li><li>Single jar</li><li>SQLite built in</li></ul>
       </a>
     </div>
   </section>

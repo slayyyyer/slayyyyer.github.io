@@ -3,7 +3,7 @@
 A static personal site: the homepage, a `/projects/` collection page and an illustrated
 `/world/` map, all a bright, layered “Aqua” desktop with scroll and pointer parallax. Plain HTML,
 CSS and a small vanilla script — no dependencies and no build step. Raster art is limited to the
-share card `og.png` (1200×630), eighteen 960×600 WebP stills under `projects/shots/`, and the favicon,
+share card `og.png` (1200×630), nineteen 960×600 WebP stills under `projects/shots/`, and the favicon,
 touch icon and web-manifest icons in the root.
 
 ## Preview locally
@@ -70,11 +70,13 @@ Notes:
 
 ## The world page
 
-`/world/` is one static page with an inline SVG map and a grouped list fallback. Four regions
-hold eighteen linked buildings: Foundry coast (systems), Arcade quarter (games), Observatory
-hills (data) and Motocross valley (play). The fan-made digital circus big top at the end of the
-Arcade quarter links to `/tadc/`, and the J interpreter’s window-grid block stands beside it at
-the quarter’s far edge.
+`/world/` is one static page with an inline SVG map and a grouped list fallback. The map is
+three bands deep and five districts wide, holding nineteen linked buildings: Foundry coast
+(systems) and the Scriptorium terrace (language and text) share the top band, the Arcade quarter
+(games) runs the full width of the middle, and Observatory hills (data) and Motocross valley
+(play) share the bottom. Why’s page works and the J interpreter’s window-grid block stand
+together among the language buildings, and the fan-made digital circus big top still closes the
+arcade.
 
 - The map links work with JavaScript disabled. The list is the default below 700px; wide screens
   get the map. JavaScript only adds the Map/List toggle, the local-time sky, the dish scan, the
@@ -83,6 +85,11 @@ the quarter’s far edge.
   is no dark colour scheme.
 - A new project means one SVG group inside `world/index.html` plus one entry in the matching
   `.world-items` list. Use the same `<a>` structure, a unique `<title>` id and a caption.
+- Each building is drawn once in its own local coordinates and placed on the map with a
+  `transform="translate(dx dy)"` on its `<a>`, so moving a district means changing one pair of
+  numbers rather than redrawing the art. The map canvas is 1600×980 with baselines at y 330
+  (top band), 620 (arcade) and 890 (bottom band). Notes and the two live lines ride along with
+  the building, so a moved note only needs its `x` pulled back inside the canvas.
 - Two live lines are wired, both same-origin and both optional:
   `/what-changed/data/today.json` and `/mx-lab/data/meta.json`. The script times out after four
   seconds, shows nothing on a first failure and marks a cached value `stale` after one.
@@ -132,6 +139,7 @@ homepage's `#projects` section shows the first three):
 | SAF Explorer | <https://slayyyyer.github.io/saf-explorer/> |
 | The Amazing Digital Circus (tadc) | <https://slayyyyer.github.io/tadc/> |
 | j.ts (J interpreter) | <https://slayyyyer.github.io/j/> |
+| Why (why-lang) | <https://slayyyyer.github.io/why-lang/> |
 
 Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`. Adding a project
 means adding its card to `projects/index.html` and a row here — and to `index.html` as well if it
@@ -139,8 +147,8 @@ should be one of the three featured cards. The cards run in thematic runs — sy
 two-up, each pair is a theme too: the two exact games, then two browser-only pieces, then the
 city's weather face beside its record diff, then motocross news beside its archive tool. The
 homepage's three `projectcard--wide` cards are its featured trio; on the collection page the same
-class gives the closing pair — the J interpreter and the fan break room — full-width rows, so the
-sixteen paired cards before them stay `two-up`.
+class gives the closing run — the fan break room and the two language projects — full-width rows,
+so the sixteen paired cards before them stay `two-up`.
 
 The homepage's header and footer `Projects` links go to `projects/`; its own `#projects` anchor is
 kept so existing links still land on the three featured cards.

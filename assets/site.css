@@ -1639,7 +1639,7 @@ body.is-scrolled .scrollcue {
 .world-map {
   display: block;
   width: 100%;
-  min-width: 920px;
+  min-width: 1040px;
   height: auto;
 }
 

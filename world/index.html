@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>My World — Justin Baker</title>
-<meta name="description" content="An illustrated, explorable map of eighteen projects: a foundry coast, an arcade quarter, observatory hills and a motocross valley.">
+<meta name="description" content="An illustrated, explorable map of nineteen projects: a foundry coast, a scriptorium terrace, an arcade quarter, observatory hills and a motocross valley.">
 <link rel="canonical" href="https://slayyyyer.github.io/world/">
 <meta property="og:title" content="My World — Justin Baker">
-<meta property="og:description" content="Eighteen projects as places: an engine works, a harbor, an arcade, a big top, a weather station and a motocross valley.">
+<meta property="og:description" content="Nineteen projects as places: an engine works and a cove, a reading terrace, an arcade and a big top, a weather station and a motocross valley.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://slayyyyer.github.io/world/">
 <meta property="og:site_name" content="Justin Baker">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Justin Baker — big systems, small details. Principal engineer, Charlotte, NC.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="My World — Justin Baker">
-<meta name="twitter:description" content="Eighteen projects as places: an engine works, a harbor, an arcade, a big top, a weather station and a motocross valley.">
+<meta name="twitter:description" content="Nineteen projects as places: an engine works and a cove, a reading terrace, an arcade and a big top, a weather station and a motocross valley.">
 <meta name="twitter:image" content="https://slayyyyer.github.io/og.png">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#e6f4ff">
@@ -74,17 +74,18 @@
     <div class="sectionhead">
       <div>
         <p class="label">My world</p>
-        <h1>Eighteen projects, one small world.</h1>
+        <h1>Nineteen projects, one small world.</h1>
       </div>
-      <p class="sectionhead__sub">Four regions: the systems on the coast, the games in the
-        arcade, the data projects up on the hills, and the motocross valley. Every building
-        opens its project.</p>
+      <p class="sectionhead__sub">Five districts: the systems on the foundry coast, the
+        languages up on the scriptorium terrace, the games in the arcade, the data projects on
+        the observatory hills, and the motocross valley. Every building opens its project.</p>
     </div>
 
     <div class="world-toolbar">
       <p class="world-hint" id="world-hint"><strong>Hover or focus</strong> a building for a
         one-line note. On a narrow screen the list comes first; the map is still there, and it
-        scrolls sideways. The fan-made big top and the language block close the Arcade quarter.</p>
+        scrolls sideways. The arcade keeps the games and the fan-made big top; the two language
+        projects share the terrace above it.</p>
       <div class="world-toggle" data-world-toggle hidden>
         <button type="button" data-view-btn="map" aria-pressed="true" aria-controls="world-view">Map</button>
         <button type="button" data-view-btn="list" aria-pressed="false" aria-controls="world-view">List view</button>
@@ -106,17 +107,18 @@
             <i class="light light--red"></i><i class="light light--amber"></i><i class="light light--green"></i>
           </span>
           <span class="world-frame__title">my-world.map</span>
-          <span class="world-frame__meta">4 regions · 18 projects</span>
+          <span class="world-frame__meta">5 regions · 19 projects</span>
         </div>
 
         <div class="world-viewport" tabindex="0" role="region"
              aria-label="Illustrated project map"
              aria-describedby="world-map-instructions">
-          <svg class="world-map" viewBox="0 0 1500 760" role="group"
+          <svg class="world-map" viewBox="0 0 1600 980" role="group"
                aria-labelledby="map-title map-desc" xmlns="http://www.w3.org/2000/svg">
             <title id="map-title">Illustrated map of Justin Baker’s projects</title>
-            <desc id="map-desc">Eighteen linked buildings and landmarks across four regions:
-              Foundry coast, Arcade quarter, Observatory hills and Motocross valley.</desc>
+            <desc id="map-desc">Nineteen linked buildings and landmarks across five districts:
+              Foundry coast, Scriptorium terrace, Arcade quarter, Observatory hills and
+              Motocross valley.</desc>
 
             <defs>
               <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
@@ -180,113 +182,150 @@
                 <stop offset=".5" stop-color="#ffffff" stop-opacity=".55"/>
                 <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
               </linearGradient>
+  <linearGradient id="gScriptorium" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f8f0de"/>
+                <stop offset=".6" stop-color="#eddfc4"/>
+                <stop offset="1" stop-color="#dfcbaa"/>
+              </linearGradient>
             </defs>
 
-            <rect width="1500" height="760" fill="url(#skyGrad)"/>
+            <rect width="1600" height="980" fill="url(#skyGrad)"/>
 
             <g class="stars" aria-hidden="true">
-              <circle cx="70" cy="52" r="1.2"/><circle cx="132" cy="96" r="1"/>
-              <circle cx="208" cy="44" r="1.4"/><circle cx="268" cy="122" r="1"/>
-              <circle cx="338" cy="60" r="1.1"/><circle cx="404" cy="34" r="1.3"/>
-              <circle cx="470" cy="108" r="1"/><circle cx="548" cy="54" r="1.2"/>
-              <circle cx="616" cy="120" r="1"/><circle cx="686" cy="38" r="1.4"/>
-              <circle cx="754" cy="98" r="1.1"/><circle cx="824" cy="56" r="1"/>
-              <circle cx="896" cy="124" r="1.2"/><circle cx="958" cy="46" r="1.3"/>
-              <circle cx="1028" cy="108" r="1"/><circle cx="1104" cy="58" r="1.2"/>
-              <circle cx="1160" cy="126" r="1"/><circle cx="1246" cy="70" r="1.3"/>
-              <circle cx="1310" cy="118" r="1"/><circle cx="1338" cy="52" r="1.1"/><circle cx="286" cy="188" r="1"/>
-              <circle cx="590" cy="196" r="1.1"/><circle cx="980" cy="198" r="1"/>
-              <circle cx="110" cy="214" r="1"/><circle cx="1054" cy="216" r="1.2"/>
-              <circle cx="1382" cy="58" r="1.2"/><circle cx="1426" cy="116" r="1"/>
-              <circle cx="1466" cy="48" r="1.3"/><circle cx="1492" cy="142" r="1.1"/>
+              <circle cx="64" cy="52" r="1.2"/><circle cx="148" cy="96" r="1"/>
+              <circle cx="226" cy="44" r="1.4"/><circle cx="302" cy="128" r="1"/>
+              <circle cx="378" cy="60" r="1.1"/><circle cx="452" cy="34" r="1.3"/>
+              <circle cx="528" cy="112" r="1"/><circle cx="604" cy="54" r="1.2"/>
+              <circle cx="682" cy="122" r="1"/><circle cx="758" cy="44" r="1.4"/>
+              <circle cx="834" cy="98" r="1.1"/><circle cx="912" cy="58" r="1"/>
+              <circle cx="986" cy="126" r="1.2"/><circle cx="1062" cy="50" r="1.3"/>
+              <circle cx="1138" cy="106" r="1"/><circle cx="1214" cy="64" r="1.2"/>
+              <circle cx="1290" cy="120" r="1"/><circle cx="1366" cy="46" r="1.3"/>
+              <circle cx="1442" cy="104" r="1"/><circle cx="1518" cy="58" r="1.1"/>
+              <circle cx="92" cy="196" r="1"/><circle cx="268" cy="208" r="1.1"/>
+              <circle cx="522" cy="200" r="1"/><circle cx="806" cy="218" r="1"/>
+              <circle cx="1088" cy="202" r="1.2"/><circle cx="1330" cy="214" r="1"/>
+              <circle cx="1478" cy="188" r="1.2"/><circle cx="120" cy="268" r="1"/>
+              <circle cx="430" cy="262" r="1.1"/><circle cx="980" cy="270" r="1"/>
+              <circle cx="1520" cy="262" r="1.1"/>
             </g>
 
             <g class="sun" aria-hidden="true">
-              <circle cx="1140" cy="150" r="40" fill="#fff6cd" opacity=".35"/>
-              <circle cx="1140" cy="150" r="27" fill="#ffe6a3" stroke="#f0c266" stroke-width="1.2"/>
-              <circle cx="1132" cy="142" r="8" fill="#fff8dc" opacity=".7"/>
+              <circle cx="800" cy="150" r="40" fill="#fff6cd" opacity=".35"/>
+              <circle cx="800" cy="150" r="27" fill="#ffe6a3" stroke="#f0c266" stroke-width="1.2"/>
+              <circle cx="792" cy="142" r="8" fill="#fff8dc" opacity=".7"/>
             </g>
 
             <g class="moon" aria-hidden="true">
-              <circle cx="1140" cy="148" r="21" fill="#f8fbff" stroke="#d7e4ef" stroke-width="1"/>
-              <circle cx="1149" cy="141" r="18" fill="#3d5d78"/>
+              <circle cx="800" cy="148" r="21" fill="#f8fbff" stroke="#d7e4ef" stroke-width="1"/>
+              <circle cx="809" cy="141" r="18" fill="#3d5d78"/>
             </g>
 
             <g class="cloud" aria-hidden="true">
-              <ellipse cx="196" cy="124" rx="44" ry="13"/>
-              <ellipse cx="222" cy="116" rx="28" ry="12"/>
-              <ellipse cx="170" cy="118" rx="20" ry="9"/>
+              <ellipse cx="210" cy="126" rx="44" ry="13"/>
+              <ellipse cx="236" cy="118" rx="28" ry="12"/>
+              <ellipse cx="184" cy="120" rx="20" ry="9"/>
             </g>
             <g class="cloud" aria-hidden="true">
-              <ellipse cx="646" cy="86" rx="34" ry="10"/>
-              <ellipse cx="668" cy="79" rx="22" ry="9"/>
+              <ellipse cx="620" cy="188" rx="34" ry="10"/>
+              <ellipse cx="642" cy="181" rx="22" ry="9"/>
             </g>
             <g class="cloud" aria-hidden="true">
-              <ellipse cx="900" cy="176" rx="40" ry="11"/>
-              <ellipse cx="926" cy="168" rx="25" ry="10"/>
+              <ellipse cx="1258" cy="122" rx="40" ry="11"/>
+              <ellipse cx="1284" cy="114" rx="25" ry="10"/>
+            </g>
+            <g class="cloud" aria-hidden="true">
+              <ellipse cx="1466" cy="196" rx="30" ry="9"/>
+              <ellipse cx="1484" cy="190" rx="20" ry="8"/>
             </g>
 
             <g aria-hidden="true">
-              <path d="M0 340C90 292 170 306 250 326C340 348 410 300 500 314C590 328 660 292 750 308C840 324 920 296 1010 310C1100 324 1250 300 1360 318C1422 328 1462 310 1500 318L1500 424L0 424Z" fill="#c3d9e6" opacity=".85"/>
-              <path d="M0 372C96 336 182 354 276 370C370 386 452 348 552 362C652 376 730 350 828 362C930 374 1054 348 1200 366C1270 372 1320 358 1360 362C1424 368 1464 352 1500 356L1500 430L0 430Z" fill="#b5cee0" opacity=".7"/>
-              <path d="M90 386l14-26 14 26zM246 390l12-22 12 22zM470 384l15-28 15 28zM706 392l12-22 12 22zM962 386l14-26 14 26zM1112 394l11-20 11 20zM1248 392l12-22 12 22z" fill="#8fb6a0" opacity=".55"/>
+              <path d="M0 300C90 252 170 266 250 286C340 308 410 260 500 274C590 288 660 252 750 268C840 284 920 256 1010 270C1100 284 1250 260 1360 278C1440 292 1530 268 1600 276L1600 400L0 400Z" fill="#c3d9e6" opacity=".85"/>
+              <path d="M0 336C96 300 182 318 276 334C370 350 452 312 552 326C652 340 730 314 828 326C930 338 1054 312 1200 330C1270 336 1320 322 1360 326C1424 332 1464 316 1600 320L1600 420L0 420Z" fill="#b5cee0" opacity=".7"/>
+              <path d="M150 300l12-24 12 24zM330 302l11-22 11 22zM560 298l13-26 13 26zM760 304l11-22 11 22zM1030 298l12-24 12 24zM1290 302l11-22 11 22z" fill="#8fb6a0" opacity=".5"/>
             </g>
 
-            <path d="M0 286C64 262 134 272 204 284C286 298 334 268 410 274C474 279 522 292 564 310L564 402L0 402Z" fill="url(#gFoundry)"/>
-            <path d="M544 288C614 250 690 258 768 266C846 274 926 246 1004 252C1082 258 1148 250 1200 262C1270 272 1320 258 1360 262C1424 268 1464 256 1500 260L1500 404L544 404Z" fill="url(#gArcade)"/>
-            <path d="M0 398C84 370 172 394 260 410C352 426 464 394 580 412L620 420L620 760L0 760Z" fill="url(#gHills)"/>
-            <path d="M600 402C696 382 796 414 900 400C1006 384 1108 402 1200 390C1260 382 1320 396 1360 388C1424 380 1462 394 1500 388L1500 760L600 760Z" fill="url(#gValley)"/>
-            <rect x="0" y="394" width="1500" height="18" fill="url(#gHaze)" opacity=".65"/>
+            <path d="M0 300C70 282 150 292 226 300C300 308 360 286 430 292C500 298 560 310 620 314C680 318 740 306 800 310L800 432L0 432Z" fill="url(#gFoundry)"/>
+            <path d="M800 310C860 304 918 292 986 296C1060 300 1120 284 1190 288C1260 292 1320 278 1390 282C1460 286 1530 276 1600 280L1600 432L800 432Z" fill="url(#gScriptorium)"/>
+            <path d="M0 424C140 414 260 428 400 424C560 418 680 430 800 424C920 418 1060 428 1200 422C1340 416 1480 426 1600 420L1600 706L0 706Z" fill="url(#gArcade)"/>
+            <path d="M0 690C90 672 180 686 270 698C360 710 450 684 560 696C650 706 730 694 800 698L800 980L0 980Z" fill="url(#gHills)"/>
+            <path d="M800 698C900 682 1000 702 1100 690C1200 678 1300 696 1400 684C1470 676 1540 688 1600 682L1600 980L800 980Z" fill="url(#gValley)"/>
+            <rect x="0" y="424" width="1600" height="16" fill="url(#gHaze)" opacity=".6"/>
+            <rect x="0" y="700" width="1600" height="16" fill="url(#gHaze)" opacity=".5"/>
+
+            <!-- foundry coast: a cove, a jar and a directory -->
+            <g aria-hidden="true">
+              <path d="M0 332C44 322 92 330 132 346L132 420L0 420Z" fill="url(#gWater)"/>
+              <path d="M0 332C44 322 92 330 132 346" fill="none" stroke="#f7fbff" stroke-width="2" opacity=".6"/>
+              <path d="M16 372q11-6 22 0M62 388q9-5 18 0M84 356q10-6 20 0" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity=".6"/>
+              <path d="M132 386h44" stroke="#c9a67c" stroke-width="6" stroke-linecap="round"/>
+              <path d="M146 386v18M172 386v18" stroke="#8a6a4a" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+              <rect class="crate" x="296" y="398" width="20" height="22"/>
+              <rect class="crate" x="300" y="380" width="18" height="18"/>
+              <text class="crate-text" x="306" y="412">jar</text>
+            </g>
+
+            <!-- scriptorium: a balustrade and two stacks of pages -->
+            <g aria-hidden="true">
+              <path d="M840 426h752" stroke="#cbb896" stroke-width="4" opacity=".7"/>
+              <path d="M840 426h752" stroke="#e6d7bb" stroke-width="10" stroke-dasharray="6 16" opacity=".85"/>
+              <rect class="stone" x="852" y="404" width="28" height="4" rx="1"/>
+              <rect class="plaque" x="854" y="399" width="24" height="4" rx="1"/>
+              <rect class="stone" x="1544" y="404" width="30" height="4" rx="1"/>
+              <rect class="plaque" x="1548" y="399" width="24" height="4" rx="1"/>
+            </g>
+
+            <!-- arcade quarter: the road, the lamps and the confetti -->
+            <g aria-hidden="true">
+              <path d="M20 592C220 570 420 600 620 580C820 560 1020 594 1220 574C1380 558 1500 582 1580 570" fill="none" stroke="#f7f0d8" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+              <path class="stroke" d="M330 620v-92M650 620v-92M970 620v-92M1280 620v-92"/>
+              <circle class="accent" cx="330" cy="524" r="4"/>
+              <circle class="accent" cx="650" cy="524" r="4"/>
+              <circle class="accent" cx="970" cy="524" r="4"/>
+              <circle class="accent" cx="1280" cy="524" r="4"/>
+              <circle cx="300" cy="470" r="2" fill="#e46aa6"/>
+              <circle cx="430" cy="502" r="2" fill="#f3c969"/>
+              <circle cx="700" cy="486" r="2" fill="#e46aa6"/>
+              <circle cx="900" cy="470" r="2" fill="#f3c969"/>
+              <circle cx="1150" cy="502" r="2" fill="#e46aa6"/>
+              <circle cx="1350" cy="486" r="2" fill="#f3c969"/>
+              <circle cx="1556" cy="472" r="2" fill="#e46aa6"/>
+            </g>
+
+            <!-- observatory hills: two ridges, a trail and a few pines -->
+            <g aria-hidden="true">
+              <path d="M0 764C80 726 160 746 240 768C330 792 430 744 540 760C640 774 720 754 800 766L800 870L0 870Z" fill="#d2ccdf" opacity=".8"/>
+              <path d="M0 852C100 816 200 838 300 860C400 882 500 838 620 860L620 962L0 962Z" fill="#c4bcd4" opacity=".7"/>
+              <path d="M28 942C118 926 206 938 294 946C384 954 468 934 566 940" fill="none" stroke="#eee9f4" stroke-width="8" stroke-linecap="round" opacity=".6"/>
+              <path d="M76 944l10-20 10 20zM86 944v10M186 950l9-18 9 18zM195 950v9M404 946l10-20 10 20zM414 946v10M498 954l8-16 8 16zM506 954v8" fill="#7f9d86" opacity=".75"/>
+            </g>
+
+            <!-- motocross valley: a dirt track with jumps and flags -->
+            <g aria-hidden="true">
+              <path d="M812 950C900 922 980 954 1060 930C1140 906 1220 938 1300 916C1380 894 1480 930 1584 910" fill="none" stroke="#c9a67c" stroke-width="14" stroke-linecap="round" opacity=".55"/>
+              <path d="M812 950C900 922 980 954 1060 930C1140 906 1220 938 1300 916C1380 894 1480 930 1584 910" fill="none" stroke="#fdf7ea" stroke-width="2" stroke-dasharray="3 10" opacity=".9"/>
+              <path d="M998 950l8-16 8 16zM1238 934l8-16 8 16z" fill="#b08e63" opacity=".8"/>
+              <path class="stroke" d="M860 902v-16M1500 896v-16"/>
+              <path d="M860 886l11 4-11 4zM1500 880l11 4-11 4z" fill="#e46aa6"/>
+            </g>
 
             <g aria-hidden="true">
-              <path d="M132 306C178 298 230 304 284 320L284 398C236 402 178 398 132 388Z" fill="url(#gWater)"/>
-              <path d="M132 306C178 298 230 304 284 320" fill="none" stroke="#f7fbff" stroke-width="2" opacity=".6"/>
-              <path d="M150 372q12-6 24 0M204 384q10-5 20 0M232 358q11-6 22 0" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity=".6"/>
-              <ellipse cx="300" cy="382" rx="14" ry="5" fill="#a9c0c2" opacity=".7"/>
-              <ellipse cx="470" cy="372" rx="11" ry="4" fill="#a9c0c2" opacity=".6"/>
-              <path d="M28 386q10-14 20 0M44 390q7-10 14 0M506 380q9-12 18 0M530 388q6-8 12 0" fill="none" stroke="#89a7a4" stroke-width="1.4" stroke-linecap="round" opacity=".7"/>
+              <text class="region-label region-label--sky" x="40" y="84">FOUNDRY COAST · SYSTEMS</text>
+              <path class="region-line" d="M40 92h172"/>
+              <text class="region-label region-label--sky" x="1560" y="84" text-anchor="end">SCRIPTORIUM · LANGUAGE &amp; TEXT</text>
+              <path class="region-line" d="M1330 92h230"/>
+              <text class="region-label" x="800" y="452" text-anchor="middle">ARCADE QUARTER · GAMES</text>
+              <path class="region-line" d="M700 460h200"/>
+              <text class="region-label" x="40" y="706">OBSERVATORY HILLS · DATA</text>
+              <path class="region-line" d="M40 714h170"/>
+              <text class="region-label" x="1560" y="706" text-anchor="end">MOTOCROSS VALLEY · PLAY</text>
+              <path class="region-line" d="M1390 714h170"/>
             </g>
 
-            <g aria-hidden="true">
-              <path d="M560 366C632 348 706 364 780 356C854 348 938 360 1014 350C1080 342 1146 352 1192 344C1236 338 1300 348 1340 340C1402 332 1452 344 1494 336" fill="none" stroke="#f7f0d8" stroke-width="10" stroke-linecap="round" opacity=".75"/>
-              <ellipse cx="610" cy="380" rx="36" ry="9" fill="#cfe0ae" opacity=".75"/>
-              <ellipse cx="842" cy="384" rx="44" ry="10" fill="#cfe0ae" opacity=".65"/>
-              <ellipse cx="1038" cy="376" rx="38" ry="9" fill="#cfe0ae" opacity=".7"/>
-              <ellipse cx="1190" cy="382" rx="30" ry="8" fill="#cfe0ae" opacity=".6"/>
-              <ellipse cx="1420" cy="374" rx="26" ry="7" fill="#cfe0ae" opacity=".55"/>
-              <path d="M580 222Q710 250 832 226" fill="none" stroke="rgba(43,84,112,.35)" stroke-width="1"/>
-              <path d="M592 224l6 12 7-11zM632 231l6 12 7-11zM672 236l6 12 7-11zM712 237l6 12 7-11zM752 234l6 12 7-11zM792 229l6 12 7-11z" fill="#e46aa6" opacity=".75"/>
-              <path d="M1040 300v-14M1160 300v-14" stroke="#8a6a4a" stroke-width="1.4" opacity=".6"/>
-            </g>
 
-            <g aria-hidden="true">
-              <path d="M0 470C80 430 160 448 240 470C330 494 430 446 540 462C580 468 604 474 620 480L620 560L0 560Z" fill="#d2ccdf" opacity=".8"/>
-              <path d="M0 540C100 504 200 526 300 548C400 570 500 526 620 548L620 620L0 620Z" fill="#c4bcd4" opacity=".7"/>
-              <path d="M76 512l12-24 12 24zM88 512v14M458 532l10-20 10 20zM468 532v12M568 486l9-18 9 18zM576 486v12" fill="#7f9d86" opacity=".7"/>
-              <path d="M28 636C118 620 206 632 294 640C384 648 468 628 566 634" fill="none" stroke="#eee9f4" stroke-width="8" stroke-linecap="round" opacity=".6"/>
-            </g>
+            <!-- Foundry coast: systems on the working shore -->
 
-            <g aria-hidden="true">
-              <path d="M620 502C720 472 820 502 920 492C1030 480 1120 492 1200 482L1200 620L620 620Z" fill="#e2c9a4" opacity=".6"/>
-              <path d="M632 626h548" stroke="#b08e63" stroke-width="2" opacity=".45" stroke-dasharray="3 9"/>
-              <path d="M648 610q9-12 18 0M700 614q7-10 14 0M1146 606q8-11 16 0M1170 618q7-9 14 0" fill="none" stroke="#9d7b52" stroke-width="1.4" stroke-linecap="round" opacity=".6"/>
-              <path d="M648 560l7-18 7 18zM666 560v10M1168 548l7-18 7 18zM1186 548v10" fill="#b08e63" opacity=".7"/>
-            </g>
-
-            <g aria-hidden="true">
-              <text class="region-label region-label--sky" x="28" y="84">FOUNDRY COAST · SYSTEMS</text>
-              <path class="region-line" d="M28 92h172"/>
-              <text class="region-label region-label--sky" x="1492" y="84" text-anchor="end">ARCADE QUARTER · GAMES</text>
-              <path class="region-line" d="M1322 92h170"/>
-              <text class="region-label" x="300" y="408">OBSERVATORY HILLS · DATA</text>
-              <path class="region-line" d="M300 416h170"/>
-              <text class="region-label" x="1172" y="408" text-anchor="end">MOTOCROSS VALLEY · PLAY</text>
-              <path class="region-line" d="M1002 416h170"/>
-            </g>
-
-            <!-- Foundry coast -->
-
-            <a class="bldg bldg--jerlang" href="../jerlang/" tabindex="0" aria-labelledby="t-jerlang" data-project="jerlang">
+<a class="bldg bldg--jerlang" href="../jerlang/" tabindex="0" aria-labelledby="t-jerlang" data-project="jerlang" transform="translate(118 -4)">
               <title id="t-jerlang">JErlang — an Erlang runtime for the JVM. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="82" cy="334" rx="54" ry="6"/>
               <g class="bldg__art">
@@ -311,7 +350,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--orders" href="../orders-service/" tabindex="0" aria-labelledby="t-orders" data-project="orders-service">
+<a class="bldg bldg--orders" href="../orders-service/" tabindex="0" aria-labelledby="t-orders" data-project="orders-service" transform="translate(255 -6)">
               <title id="t-orders">Orders Service — a three-repo reference system. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="205" cy="336" rx="78" ry="6"/>
               <g class="bldg__art">
@@ -344,59 +383,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--morphex" href="../morphex/" tabindex="0" aria-labelledby="t-morphex" data-project="morphex">
-              <title id="t-morphex">Morphex — deterministic English inflection, Java wing. Opens the project.</title>
-              <ellipse class="bldg__shadow" cx="328" cy="334" rx="38" ry="6"/>
-              <g class="bldg__art">
-                <rect class="wall" x="302" y="184" width="52" height="148"/>
-                <path class="roof" d="M296 184h64l-32-18z"/>
-                <rect class="roof-deep" x="294" y="180" width="68" height="7" rx="2"/>
-                <rect class="stone" x="298" y="316" width="60" height="8"/>
-                <rect class="stone" x="294" y="324" width="68" height="8"/>
-                <rect class="plaque" x="310" y="196" width="36" height="13" rx="6"/>
-                <text class="plaque-text" x="328" y="206" text-anchor="middle">J</text>
-                <path class="glass" d="M312 266v-22a5 5 0 0 1 10 0v22z"/>
-                <path class="glass" d="M327 266v-22a5 5 0 0 1 10 0v22z"/>
-                <path class="glass" d="M342 266v-22a5 5 0 0 1 10 0v22z"/>
-                <rect class="door" x="320" y="300" width="16" height="16" rx="2"/>
-                <path class="shine" d="M306 192h44"/>
-              </g>
-              <rect class="bldg__ring" x="288" y="158" width="80" height="216" rx="12"/>
-              <text class="bldg__name" x="328" y="365" text-anchor="middle">Morphex</text>
-              <g class="bldg__note" aria-hidden="true">
-                <rect class="bldg__note-bg" x="180" y="104" width="320" height="26" rx="8"/>
-                <text class="bldg__note-text" x="192" y="121">Deterministic English inflection, Java wing.</text>
-              </g>
-            </a>
-
-            <a class="bldg bldg--transcend" href="../transcend/" tabindex="0" aria-labelledby="t-transcend" data-project="transcend">
-              <title id="t-transcend">Transcend — English↔French translation, trained from scratch. Opens the project.</title>
-              <ellipse class="bldg__shadow" cx="392" cy="334" rx="40" ry="6"/>
-              <g class="bldg__art">
-                <rect class="wall" x="366" y="228" width="52" height="104"/>
-                <path class="roof" d="M360 228h64l-8-15h-48z"/>
-                <rect class="roof-deep" x="358" y="224" width="68" height="5" rx="2"/>
-                <rect class="plaque" x="370" y="236" width="44" height="15" rx="3"/>
-                <text class="plaque-text" x="392" y="247" text-anchor="middle">EN·FR</text>
-                <rect class="glass" x="372" y="264" width="10" height="16" rx="1"/>
-                <rect class="glass" x="387" y="264" width="10" height="16" rx="1"/>
-                <rect class="glass" x="402" y="264" width="10" height="16" rx="1"/>
-                <rect class="glass" x="372" y="288" width="10" height="16" rx="1"/>
-                <rect class="glass" x="402" y="288" width="10" height="16" rx="1"/>
-                <rect class="door" x="385" y="306" width="14" height="26" rx="2"/>
-                <path class="stroke" d="M422 224v-16"/>
-                <circle class="accent-pink" cx="422" cy="204" r="2.4"/>
-                <path class="shine" d="M370 234h44"/>
-              </g>
-              <rect class="bldg__ring" x="352" y="196" width="82" height="178" rx="12"/>
-              <text class="bldg__name" x="392" y="365" text-anchor="middle">Transcend</text>
-              <g class="bldg__note" aria-hidden="true">
-                <rect class="bldg__note-bg" x="236" y="104" width="320" height="26" rx="8"/>
-                <text class="bldg__note-text" x="248" y="121">English ↔ French, trained from scratch.</text>
-              </g>
-            </a>
-
-            <a class="bldg bldg--buffy" href="../buffy/" tabindex="0" aria-labelledby="t-buffy" data-project="buffy">
+<a class="bldg bldg--buffy" href="../buffy/" tabindex="0" aria-labelledby="t-buffy" data-project="buffy" transform="translate(205 -4)">
               <title id="t-buffy">Buffy — a desk companion for your coding agent. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="485" cy="334" rx="48" ry="6"/>
               <g class="bldg__art">
@@ -427,9 +414,128 @@
               </g>
             </a>
 
-            <!-- Arcade quarter -->
 
-            <a class="bldg bldg--yahtzee" href="../yahtzee/" tabindex="0" aria-labelledby="t-yahtzee" data-project="yahtzee">
+            <!-- Scriptorium: the language and text terrace -->
+
+<a class="bldg bldg--morphex" href="../morphex/" tabindex="0" aria-labelledby="t-morphex" data-project="morphex" transform="translate(982 -4)">
+              <title id="t-morphex">Morphex — deterministic English inflection, Java wing. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="328" cy="334" rx="38" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall" x="302" y="184" width="52" height="148"/>
+                <path class="roof" d="M296 184h64l-32-18z"/>
+                <rect class="roof-deep" x="294" y="180" width="68" height="7" rx="2"/>
+                <rect class="stone" x="298" y="316" width="60" height="8"/>
+                <rect class="stone" x="294" y="324" width="68" height="8"/>
+                <rect class="plaque" x="310" y="196" width="36" height="13" rx="6"/>
+                <text class="plaque-text" x="328" y="206" text-anchor="middle">J</text>
+                <path class="glass" d="M312 266v-22a5 5 0 0 1 10 0v22z"/>
+                <path class="glass" d="M327 266v-22a5 5 0 0 1 10 0v22z"/>
+                <path class="glass" d="M342 266v-22a5 5 0 0 1 10 0v22z"/>
+                <rect class="door" x="320" y="300" width="16" height="16" rx="2"/>
+                <path class="shine" d="M306 192h44"/>
+              </g>
+              <rect class="bldg__ring" x="288" y="158" width="80" height="216" rx="12"/>
+              <text class="bldg__name" x="328" y="365" text-anchor="middle">Morphex</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="180" y="104" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="192" y="121">Deterministic English inflection, Java wing.</text>
+              </g>
+            </a>
+
+<a class="bldg bldg--transcend" href="../transcend/" tabindex="0" aria-labelledby="t-transcend" data-project="transcend" transform="translate(1068 -4)">
+              <title id="t-transcend">Transcend — English↔French translation, trained from scratch. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="392" cy="334" rx="40" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall" x="366" y="228" width="52" height="104"/>
+                <path class="roof" d="M360 228h64l-8-15h-48z"/>
+                <rect class="roof-deep" x="358" y="224" width="68" height="5" rx="2"/>
+                <rect class="plaque" x="370" y="236" width="44" height="15" rx="3"/>
+                <text class="plaque-text" x="392" y="247" text-anchor="middle">EN·FR</text>
+                <rect class="glass" x="372" y="264" width="10" height="16" rx="1"/>
+                <rect class="glass" x="387" y="264" width="10" height="16" rx="1"/>
+                <rect class="glass" x="402" y="264" width="10" height="16" rx="1"/>
+                <rect class="glass" x="372" y="288" width="10" height="16" rx="1"/>
+                <rect class="glass" x="402" y="288" width="10" height="16" rx="1"/>
+                <rect class="door" x="385" y="306" width="14" height="26" rx="2"/>
+                <path class="stroke" d="M422 224v-16"/>
+                <circle class="accent-pink" cx="422" cy="204" r="2.4"/>
+                <path class="shine" d="M370 234h44"/>
+              </g>
+              <rect class="bldg__ring" x="352" y="196" width="82" height="178" rx="12"/>
+              <text class="bldg__name" x="392" y="365" text-anchor="middle">Transcend</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="200" y="104" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="212" y="121">English ↔ French, trained from scratch.</text>
+              </g>
+            </a>
+
+            <a class="bldg bldg--why" href="../why-lang/" tabindex="0" aria-labelledby="t-why" data-project="why-lang">
+              <title id="t-why">Why — a page language for the JVM. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="960" cy="330" rx="58" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall-warm" x="916" y="244" width="88" height="86"/>
+                <path class="roof" d="M906 244l54-30 54 30z"/>
+                <rect class="roof-deep" x="900" y="240" width="120" height="6" rx="2"/>
+                <rect class="wall" x="986" y="206" width="10" height="24"/>
+                <rect class="roof-deep" x="983" y="202" width="16" height="5" rx="2"/>
+                <rect class="ledger" x="928" y="258" width="34" height="46" rx="2"/>
+                <path class="ledger-line" d="M934 268h22M934 273h16M934 282h20M934 287h12M934 296h18"/>
+                <rect class="plaque" x="968" y="258" width="26" height="14" rx="2"/>
+                <text class="plaque-text" x="981" y="268" text-anchor="middle">why</text>
+                <rect class="glass" x="968" y="278" width="26" height="14" rx="2"/>
+                <rect class="door" x="944" y="300" width="20" height="30" rx="2"/>
+                <rect class="plaque" x="1010" y="312" width="26" height="4" rx="1"/>
+                <rect class="plaque" x="1012" y="306" width="22" height="4" rx="1"/>
+                <rect class="stone" x="1008" y="318" width="30" height="4" rx="1"/>
+                <rect class="stone" x="938" y="330" width="44" height="4" rx="1"/>
+                <path class="shine" d="M920 250h26"/>
+              </g>
+              <rect class="bldg__ring" x="892" y="196" width="136" height="142" rx="12"/>
+              <text class="bldg__name" x="960" y="361" text-anchor="middle">Why</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="800" y="104" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="812" y="121">Drop a file, hit its URL, it runs.</text>
+              </g>
+            </a>
+
+<a class="bldg bldg--j" href="../j/" tabindex="0" aria-labelledby="t-j" data-project="j" transform="translate(-272 -14)">
+              <title id="t-j">j.ts — a J interpreter in TypeScript. Opens the project.</title>
+              <ellipse class="bldg__shadow" cx="1412" cy="344" rx="50" ry="6"/>
+              <g class="bldg__art">
+                <rect class="wall" x="1370" y="252" width="84" height="92"/>
+                <rect class="roof" x="1364" y="246" width="96" height="9" rx="3"/>
+                <rect class="roof-deep" x="1362" y="243" width="100" height="5" rx="2"/>
+                <path class="stroke" d="M1398 246v-14M1426 246v-14"/>
+                <rect class="plaque" x="1390" y="210" width="44" height="18" rx="3"/>
+                <text class="plaque-text" x="1412" y="223" text-anchor="middle">j.ts</text>
+                <rect class="glass" x="1375" y="262" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1396" y="262" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1417" y="262" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1438" y="262" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1375" y="279" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1396" y="279" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1417" y="279" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1438" y="279" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1375" y="296" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1396" y="296" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1417" y="296" width="12" height="12" rx="1"/>
+                <rect class="glass" x="1438" y="296" width="12" height="12" rx="1"/>
+                <rect class="door" x="1400" y="316" width="18" height="28" rx="2"/>
+                <rect class="stone" x="1392" y="344" width="34" height="4" rx="1"/>
+                <path class="shine" d="M1374 258h76"/>
+              </g>
+              <rect class="bldg__ring" x="1356" y="196" width="112" height="160" rx="12"/>
+              <text class="bldg__name" x="1412" y="377" text-anchor="middle">j.ts</text>
+              <g class="bldg__note" aria-hidden="true">
+                <rect class="bldg__note-bg" x="1292" y="156" width="200" height="26" rx="8"/>
+                <text class="bldg__note-text" x="1304" y="173">A J interpreter you can type into.</text>
+              </g>
+            </a>
+
+
+            <!-- Arcade quarter: the games and the fan-made big top -->
+
+<a class="bldg bldg--yahtzee" href="../yahtzee/" tabindex="0" aria-labelledby="t-yahtzee" data-project="yahtzee" transform="translate(-445 277)">
               <title id="t-yahtzee">Yahtzee — exact-probability dice. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="635" cy="343" rx="56" ry="6"/>
               <g class="bldg__art">
@@ -466,7 +572,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--blackjack" href="../blackjack/" tabindex="0" aria-labelledby="t-blackjack" data-project="blackjack">
+<a class="bldg bldg--blackjack" href="../blackjack/" tabindex="0" aria-labelledby="t-blackjack" data-project="blackjack" transform="translate(-272 275)">
               <title id="t-blackjack">Blackjack Lab — an exact solver and the table around it. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="772" cy="345" rx="76" ry="6"/>
               <g class="bldg__art">
@@ -502,7 +608,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--word-chomp" href="../word-chomp/" tabindex="0" aria-labelledby="t-word-chomp" data-project="word-chomp">
+<a class="bldg bldg--word-chomp" href="../word-chomp/" tabindex="0" aria-labelledby="t-word-chomp" data-project="word-chomp" transform="translate(-115 275)">
               <title id="t-word-chomp">Word Chomp! — a garden word dig against the clock. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="925" cy="345" rx="78" ry="6"/>
               <g class="bldg__art">
@@ -551,7 +657,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--boggle" href="../boggle/" tabindex="0" aria-labelledby="t-boggle" data-project="boggle">
+<a class="bldg bldg--boggle" href="../boggle/" tabindex="0" aria-labelledby="t-boggle" data-project="boggle" transform="translate(20 276)">
               <title id="t-boggle">Boggle — a word game in a 4×4 grid of letter dice. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="1100" cy="344" rx="64" ry="6"/>
               <g class="bldg__art">
@@ -588,7 +694,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--tadc" href="../tadc/" tabindex="0" aria-labelledby="t-tadc" data-project="tadc">
+<a class="bldg bldg--tadc" href="../tadc/" tabindex="0" aria-labelledby="t-tadc" data-project="tadc" transform="translate(168 276)">
               <title id="t-tadc">The Amazing Digital Circus — a fan-made break room of 33 acts. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="1272" cy="344" rx="64" ry="6"/>
               <g class="bldg__art">
@@ -620,43 +726,10 @@
               </g>
             </a>
 
-            <a class="bldg bldg--j" href="../j/" tabindex="0" aria-labelledby="t-j" data-project="j">
-              <title id="t-j">j.ts — a J interpreter in TypeScript. Opens the project.</title>
-              <ellipse class="bldg__shadow" cx="1412" cy="344" rx="50" ry="6"/>
-              <g class="bldg__art">
-                <rect class="wall" x="1370" y="252" width="84" height="92"/>
-                <rect class="roof" x="1364" y="246" width="96" height="9" rx="3"/>
-                <rect class="roof-deep" x="1362" y="243" width="100" height="5" rx="2"/>
-                <path class="stroke" d="M1398 246v-14M1426 246v-14"/>
-                <rect class="plaque" x="1390" y="210" width="44" height="18" rx="3"/>
-                <text class="plaque-text" x="1412" y="223" text-anchor="middle">j.ts</text>
-                <rect class="glass" x="1375" y="262" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1396" y="262" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1417" y="262" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1438" y="262" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1375" y="279" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1396" y="279" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1417" y="279" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1438" y="279" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1375" y="296" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1396" y="296" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1417" y="296" width="12" height="12" rx="1"/>
-                <rect class="glass" x="1438" y="296" width="12" height="12" rx="1"/>
-                <rect class="door" x="1400" y="316" width="18" height="28" rx="2"/>
-                <rect class="stone" x="1392" y="344" width="34" height="4" rx="1"/>
-                <path class="shine" d="M1374 258h76"/>
-              </g>
-              <rect class="bldg__ring" x="1356" y="196" width="112" height="160" rx="12"/>
-              <text class="bldg__name" x="1412" y="377" text-anchor="middle">j.ts</text>
-              <g class="bldg__note" aria-hidden="true">
-                <rect class="bldg__note-bg" x="1292" y="156" width="200" height="26" rx="8"/>
-                <text class="bldg__note-text" x="1304" y="173">A J interpreter you can type into.</text>
-              </g>
-            </a>
 
-            <!-- Observatory hills -->
+            <!-- Observatory hills: the data projects above the arcade -->
 
-            <a class="bldg bldg--earth-radio" href="../earth-radio/" tabindex="0" aria-labelledby="t-earth-radio" data-project="earth-radio">
+<a class="bldg bldg--earth-radio" href="../earth-radio/" tabindex="0" aria-labelledby="t-earth-radio" data-project="earth-radio" transform="translate(50 266)">
               <title id="t-earth-radio">Earth Radio — one day of earthquakes, played as sound. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="100" cy="624" rx="52" ry="6"/>
               <g class="bldg__art">
@@ -683,7 +756,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--clt-almanac" href="../clt-almanac/" tabindex="0" aria-labelledby="t-clt-almanac" data-project="clt-almanac">
+<a class="bldg bldg--clt-almanac" href="../clt-almanac/" tabindex="0" aria-labelledby="t-clt-almanac" data-project="clt-almanac" transform="translate(106 266)">
               <title id="t-clt-almanac">The Charlotte Almanac — a daily forecast from the station record. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="244" cy="624" rx="42" ry="6"/>
               <g class="bldg__art">
@@ -708,7 +781,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--murmur" href="../murmur/" tabindex="0" aria-labelledby="t-murmur" data-project="murmur">
+<a class="bldg bldg--murmur" href="../murmur/" tabindex="0" aria-labelledby="t-murmur" data-project="murmur" transform="translate(190 266)">
               <title id="t-murmur">Murmur — a small face that reacts to the weather. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="370" cy="624" rx="54" ry="6"/>
               <g class="bldg__art">
@@ -738,7 +811,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--what-changed" href="../what-changed/" tabindex="0" aria-labelledby="t-what-changed" data-project="what-changed">
+<a class="bldg bldg--what-changed" href="../what-changed/" tabindex="0" aria-labelledby="t-what-changed" data-project="what-changed" transform="translate(222 266)">
               <title id="t-what-changed">What Changed Today — a daily ledger of public records. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="508" cy="624" rx="66" ry="6"/>
               <g class="bldg__art">
@@ -769,9 +842,10 @@
               </g>
             </a>
 
-            <!-- Motocross valley -->
 
-            <a class="bldg bldg--mx-lab" href="../mx-lab/" tabindex="0" aria-labelledby="t-mx-lab" data-project="mx-lab">
+            <!-- Motocross valley: the sport and its archives -->
+
+<a class="bldg bldg--mx-lab" href="../mx-lab/" tabindex="0" aria-labelledby="t-mx-lab" data-project="mx-lab" transform="translate(297 266)">
               <title id="t-mx-lab">MX Lab — seven seasons of motocross, measured. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="663" cy="624" rx="48" ry="6"/>
               <g class="bldg__art">
@@ -797,7 +871,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--motobuzz" href="../motobuzz/" tabindex="0" aria-labelledby="t-motobuzz" data-project="motobuzz">
+<a class="bldg bldg--motobuzz" href="../motobuzz/" tabindex="0" aria-labelledby="t-motobuzz" data-project="motobuzz" transform="translate(402 266)">
               <title id="t-motobuzz">MotoBuzz — what the sport is talking about, ranked. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="778" cy="624" rx="40" ry="6"/>
               <g class="bldg__art">
@@ -822,7 +896,7 @@
               </g>
             </a>
 
-            <a class="bldg bldg--saf" href="../saf-explorer/" tabindex="0" aria-labelledby="t-saf" data-project="saf-explorer">
+<a class="bldg bldg--saf" href="../saf-explorer/" tabindex="0" aria-labelledby="t-saf" data-project="saf-explorer" transform="translate(483 266)">
               <title id="t-saf">SAF Explorer — open, list and pack MX Simulator .saf archives. Opens the project.</title>
               <ellipse class="bldg__shadow" cx="907" cy="624" rx="60" ry="6"/>
               <g class="bldg__art">
@@ -841,11 +915,10 @@
               <rect class="bldg__ring" x="824" y="506" width="150" height="152" rx="12"/>
               <text class="bldg__name" x="907" y="650" text-anchor="middle">SAF Explorer</text>
               <g class="bldg__note" aria-hidden="true">
-                <rect class="bldg__note-bg" x="860" y="438" width="320" height="26" rx="8"/>
-                <text class="bldg__note-text" x="872" y="455">A crate warehouse for .saf archives.</text>
+                <rect class="bldg__note-bg" x="790" y="438" width="320" height="26" rx="8"/>
+                <text class="bldg__note-text" x="802" y="455">A crate warehouse for .saf archives.</text>
               </g>
             </a>
-
 
           </svg>
         </div>
@@ -872,6 +945,20 @@
               </a>
             </li>
             <li>
+              <a class="world-item" href="../buffy/" data-project="buffy">
+                <span class="world-item__top"><span class="world-item__name">Buffy</span><span class="world-item__path">/buffy/</span></span>
+                <span class="world-item__caption">A small cottage with a desk companion in the window.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="world-group" aria-labelledby="region-scriptorium">
+          <div class="world-group__head">
+            <h3 id="region-scriptorium">Scriptorium</h3>
+            <span class="world-group__tag">language</span>
+          </div>
+          <ul class="world-items">
+            <li>
               <a class="world-item" href="../morphex/" data-project="morphex">
                 <span class="world-item__top"><span class="world-item__name">Morphex</span><span class="world-item__path">/morphex/</span></span>
                 <span class="world-item__caption">Deterministic English inflection, Java wing.</span>
@@ -884,14 +971,19 @@
               </a>
             </li>
             <li>
-              <a class="world-item" href="../buffy/" data-project="buffy">
-                <span class="world-item__top"><span class="world-item__name">Buffy</span><span class="world-item__path">/buffy/</span></span>
-                <span class="world-item__caption">A small cottage with a desk companion in the window.</span>
+              <a class="world-item" href="../why-lang/" data-project="why-lang">
+                <span class="world-item__top"><span class="world-item__name">Why</span><span class="world-item__path">/why-lang/</span></span>
+                <span class="world-item__caption">A page language for the JVM: drop a file, hit its URL, it runs.</span>
+              </a>
+            </li>
+            <li>
+              <a class="world-item" href="../j/" data-project="j">
+                <span class="world-item__top"><span class="world-item__name">j.ts</span><span class="world-item__path">/j/</span></span>
+                <span class="world-item__caption">A J interpreter you can type into.</span>
               </a>
             </li>
           </ul>
         </section>
-
         <section class="world-group" aria-labelledby="region-arcade">
           <div class="world-group__head">
             <h3 id="region-arcade">Arcade quarter</h3>
@@ -928,15 +1020,8 @@
                 <span class="world-item__caption">33 acts, one big top, no exit.</span>
               </a>
             </li>
-            <li>
-              <a class="world-item" href="../j/" data-project="j">
-                <span class="world-item__top"><span class="world-item__name">j.ts</span><span class="world-item__path">/j/</span></span>
-                <span class="world-item__caption">A J interpreter you can type into.</span>
-              </a>
-            </li>
           </ul>
         </section>
-
         <section class="world-group" aria-labelledby="region-observatory">
           <div class="world-group__head">
             <h3 id="region-observatory">Observatory hills</h3>
@@ -970,7 +1055,6 @@
             </li>
           </ul>
         </section>
-
         <section class="world-group" aria-labelledby="region-motocross">
           <div class="world-group__head">
             <h3 id="region-motocross">Motocross valley</h3>
@@ -1002,8 +1086,8 @@
 
     </div>
 
-    <p class="world-note">Eighteen projects across four regions. Adding a project means one SVG
-      group and one list entry — the map is hand-drawn, not generated.</p>
+    <p class="world-note">Nineteen projects across five districts. Adding a project means one
+      SVG group and one list entry — the map is hand-drawn, not generated.</p>
   </section>
 
 </main>
