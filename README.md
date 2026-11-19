@@ -3,7 +3,7 @@
 A static personal site: the homepage, a `/projects/` collection page and an illustrated
 `/world/` map, all a bright, layered “Aqua” desktop with scroll and pointer parallax. Plain HTML,
 CSS and a small vanilla script — no dependencies and no build step. Raster art is limited to the
-share card `og.png` (1200×630), seventeen 960×600 WebP stills under `projects/shots/`, and the favicon,
+share card `og.png` (1200×630), eighteen 960×600 WebP stills under `projects/shots/`, and the favicon,
 touch icon and web-manifest icons in the root.
 
 ## Preview locally
@@ -71,9 +71,10 @@ Notes:
 ## The world page
 
 `/world/` is one static page with an inline SVG map and a grouped list fallback. Four regions
-hold seventeen linked buildings: Foundry coast (systems), Arcade quarter (games), Observatory
+hold eighteen linked buildings: Foundry coast (systems), Arcade quarter (games), Observatory
 hills (data) and Motocross valley (play). The fan-made digital circus big top at the end of the
-Arcade quarter links to `/tadc/`.
+Arcade quarter links to `/tadc/`, and the J interpreter’s window-grid block stands beside it at
+the quarter’s far edge.
 
 - The map links work with JavaScript disabled. The list is the default below 700px; wide screens
   get the map. JavaScript only adds the Map/List toggle, the local-time sky, the dish scan, the
@@ -130,6 +131,7 @@ homepage's `#projects` section shows the first three):
 | MotoBuzz | <https://slayyyyer.github.io/motobuzz/> |
 | SAF Explorer | <https://slayyyyer.github.io/saf-explorer/> |
 | The Amazing Digital Circus (tadc) | <https://slayyyyer.github.io/tadc/> |
+| j.ts (J interpreter) | <https://slayyyyer.github.io/j/> |
 
 Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`. Adding a project
 means adding its card to `projects/index.html` and a row here — and to `index.html` as well if it
@@ -137,8 +139,8 @@ should be one of the three featured cards. The cards run in thematic runs — sy
 two-up, each pair is a theme too: the two exact games, then two browser-only pieces, then the
 city's weather face beside its record diff, then motocross news beside its archive tool. The
 homepage's three `projectcard--wide` cards are its featured trio; on the collection page the same
-class gives the closing fan break room a full-width row, so the sixteen paired cards before it stay
-`two-up`.
+class gives the closing pair — the J interpreter and the fan break room — full-width rows, so the
+sixteen paired cards before them stay `two-up`.
 
 The homepage's header and footer `Projects` links go to `projects/`; its own `#projects` anchor is
 kept so existing links still land on the three featured cards.
