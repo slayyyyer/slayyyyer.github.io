@@ -147,8 +147,8 @@ should be one of the three featured cards. The cards run in thematic runs — sy
 two-up, each pair is a theme too: the two exact games, then two browser-only pieces, then the
 city's weather face beside its record diff, then motocross news beside its archive tool. The
 homepage's three `projectcard--wide` cards are its featured trio; on the collection page the same
-class gives the closing run — the fan break room and the two language projects — full-width rows,
-so the sixteen paired cards before them stay `two-up`.
+class gives the fan break room a full-width row of its own, with the two language projects paired
+`two-up` after it, so the sixteen paired cards before it and that closing pair all stay two-up.
 
 The homepage's header and footer `Projects` links go to `projects/`; its own `#projects` anchor is
 kept so existing links still land on the three featured cards.
