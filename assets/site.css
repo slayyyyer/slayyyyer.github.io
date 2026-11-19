@@ -747,6 +747,7 @@ body.is-scrolled .scrollcue {
   font-size: clamp(1.9rem, 3.4vw, 2.75rem);
   line-height: 1.05;
   letter-spacing: -.035em;
+  text-wrap: balance;
 }
 
 .sectionhead__sub {
