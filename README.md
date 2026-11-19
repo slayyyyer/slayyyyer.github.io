@@ -3,7 +3,7 @@
 A static personal site: the homepage, a `/projects/` collection page and an illustrated
 `/world/` map, all a bright, layered “Aqua” desktop with scroll and pointer parallax. Plain HTML,
 CSS and a small vanilla script — no dependencies and no build step. Raster art is limited to the
-share card `og.png` (1200×630), eight 960×600 WebP stills under `projects/shots/`, and the favicon,
+share card `og.png` (1200×630), sixteen 960×600 WebP stills under `projects/shots/`, and the favicon,
 touch icon and web-manifest icons in the root.
 
 ## Preview locally
