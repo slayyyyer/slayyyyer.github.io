@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects — Justin Baker</title>
-<meta name="description" content="The full collection: nineteen live experiments — an Erlang runtime for the JVM, a page language for the JVM, a J interpreter in TypeScript, deterministic English inflection, English↔French translation, an exact Boggle solver, exact-probability games, a 33-act fan-made digital circus, Charlotte data projects and motocross tooling.">
+<meta name="description" content="The full collection: twenty live experiments — an Erlang runtime for the JVM, a page language for the JVM and an X clone built on it, a J interpreter in TypeScript, deterministic English inflection, English↔French translation, an exact Boggle solver, exact-probability games, a 33-act fan-made digital circus, Charlotte data projects and motocross tooling.">
 <link rel="canonical" href="https://slayyyyer.github.io/projects/">
 <meta property="og:title" content="Projects — Justin Baker">
-<meta property="og:description" content="Nineteen live experiments: systems, two languages and a translator, browser games, a fan-made digital circus, Charlotte data projects and motocross tooling.">
+<meta property="og:description" content="Twenty live experiments: systems, two languages, a translator and an X clone built from one of them, browser games, a fan-made digital circus, Charlotte data projects and motocross tooling.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://slayyyyer.github.io/projects/">
 <meta property="og:site_name" content="Justin Baker">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Justin Baker — big systems, small details. Principal engineer, Charlotte, NC.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projects — Justin Baker">
-<meta name="twitter:description" content="Nineteen live experiments: systems, two languages and a translator, browser games, a fan-made digital circus, Charlotte data projects and motocross tooling.">
+<meta name="twitter:description" content="Twenty live experiments: systems, two languages, a translator and an X clone built from one of them, browser games, a fan-made digital circus, Charlotte data projects and motocross tooling.">
 <meta name="twitter:image" content="https://slayyyyer.github.io/og.png">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#e6f4ff">
@@ -76,8 +76,8 @@
         <p class="label">All projects</p>
         <h1>Everything I built for the fun of it.</h1>
       </div>
-      <p class="sectionhead__sub">Nineteen live experiments, each on its own subpath of this domain —
-        the three from the homepage first.</p>
+      <p class="sectionhead__sub">Twenty live experiments, almost all on their own subpath of this
+        domain — the three from the homepage first.</p>
     </div>
 
     <div class="projectgrid">
@@ -226,7 +226,7 @@
         <ul class="stack"><li>Python</li><li>.saf format</li><li>Standalone exe</li></ul>
       </a>
 
-      <a class="projectcard projectcard--wide" href="/tadc/">
+      <a class="projectcard" href="/tadc/">
         <span class="projectcard__mark" aria-hidden="true">↗</span>
         <p class="projectcard__path">/tadc/</p>
         <h3>The Amazing Digital Circus: a fan-made break room</h3>
@@ -251,6 +251,15 @@
         <img class="projectcard__shot" src="shots/why.webp" width="960" height="600" alt="The Why homepage: “Drop a file. Hit its URL. It runs.” beside a site/index.why page — imports, controller and view — rendering a Latest posts list at localhost:8080." loading="lazy">
         <p class="projectcard__copy">A small page language for the JVM: a page is a <code>.why</code> file in a folder, and the server compiles it on request — no router, no build step, no framework, one jar and a directory. Scope: imports, controller and view sections in a single file; mustaches that evaluate real Ruby-flavoured expressions, escaped by default; SQLite with bound parameters; <code>file:line</code> errors with a caret and did-you-mean hints; and <code>why check</code>, which compiles every page and prints a page map before you serve it. A proof of concept, deliberately small.</p>
         <ul class="stack"><li>Java 21 · JVM</li><li>Single jar</li><li>SQLite built in</li></ul>
+      </a>
+
+      <a class="projectcard" href="https://whyx-sxzp.onrender.com/">
+        <span class="projectcard__mark" aria-hidden="true">↗</span>
+        <p class="projectcard__path">whyx-sxzp.onrender.com</p>
+        <h3>280 characters, one .why file per URL</h3>
+        <img class="projectcard__shot" src="shots/whyx.webp" width="960" height="600" alt="The whyx home feed signed in as Alice Chen: a compose box above posts from Alice and Erin Walsh with reply, repost and like counts, under Home, Explore and Profile navigation." loading="lazy">
+        <p class="projectcard__copy">An X clone built from Why pages on a vendored copy of the runtime: feed, threads, profiles, replies, likes, reposts, search, sign-up and sign-in, with no router and no page build step — one <code>.why</code> file per URL. Scope: server-side sessions with sign-in rotation, PBKDF2 password hashing and SQLite through bound parameters, with the runtime's own suite driving the real pages through a test server — including the home feed's follow graph and a check that nobody deletes someone else's post. Ships as a two-stage Docker image on Render, where the free instance rebuilds the demo database from its migrations on every wake.</p>
+        <ul class="stack"><li>Why pages</li><li>SQLite</li><li>Docker on Render</li></ul>
       </a>
     </div>
   </section>

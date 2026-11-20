@@ -3,7 +3,7 @@
 A static personal site: the homepage, a `/projects/` collection page and an illustrated
 `/world/` map, all a bright, layered “Aqua” desktop with scroll and pointer parallax. Plain HTML,
 CSS and a small vanilla script — no dependencies and no build step. Raster art is limited to the
-share card `og.png` (1200×630), nineteen 960×600 WebP stills under `projects/shots/`, and the favicon,
+share card `og.png` (1200×630), twenty 960×600 WebP stills under `projects/shots/`, and the favicon,
 touch icon and web-manifest icons in the root.
 
 ## Preview locally
@@ -71,12 +71,12 @@ Notes:
 ## The world page
 
 `/world/` is one static page with an inline SVG map and a grouped list fallback. The map is
-three bands deep and five districts wide, holding nineteen linked buildings: Foundry coast
+three bands deep and five districts wide, holding twenty linked buildings: Foundry coast
 (systems) and the Scriptorium terrace (language and text) share the top band, the Arcade quarter
 (games) runs the full width of the middle, and Observatory hills (data) and Motocross valley
-(play) share the bottom. Why’s page works and the J interpreter’s window-grid block stand
-together among the language buildings, and the fan-made digital circus big top still closes the
-arcade.
+(play) share the bottom. Why’s page works, the whyx message board and the J interpreter’s
+window-grid block stand together among the language buildings, and the fan-made digital circus big
+top still closes the arcade.
 
 - The map links work with JavaScript disabled. The list is the default below 700px; wide screens
   get the map. JavaScript only adds the Map/List toggle, the local-time sky, the dish scan, the
@@ -140,15 +140,16 @@ homepage's `#projects` section shows the first three):
 | The Amazing Digital Circus (tadc) | <https://slayyyyer.github.io/tadc/> |
 | j.ts (J interpreter) | <https://slayyyyer.github.io/j/> |
 | Why (why-lang) | <https://slayyyyer.github.io/why-lang/> |
+| whyx (X clone built on Why) | <https://whyx-sxzp.onrender.com/> |
 
-Each is a separate repository published at `https://slayyyyer.github.io/<repo>/`. Adding a project
+Each is a separate repository. All but whyx are published at `https://slayyyyer.github.io/<repo>/`;
+whyx (`slayyyyer/whyx`) is a Docker image on Render, and its card and map building link there. Adding a project
 means adding its card to `projects/index.html` and a row here — and to `index.html` as well if it
 should be one of the three featured cards. The cards run in thematic runs — systems and tooling, then play, then Charlotte, then motocross — and because they flow
-two-up, each pair is a theme too: the two exact games, then two browser-only pieces, then the
+two-up, each pair is usually a theme too: the two exact games, then two browser-only pieces, then the
 city's weather face beside its record diff, then motocross news beside its archive tool. The
-homepage's three `projectcard--wide` cards are its featured trio; on the collection page the same
-class gives the fan break room a full-width row of its own, with the two language projects paired
-`two-up` after it, so the sixteen paired cards before it and that closing pair all stay two-up.
+homepage's three `projectcard--wide` cards are its featured trio; the collection page uses the
+class for none of its cards, so all twenty stay `two-up` in ten pairs.
 
 The homepage's header and footer `Projects` links go to `projects/`; its own `#projects` anchor is
 kept so existing links still land on the three featured cards.
