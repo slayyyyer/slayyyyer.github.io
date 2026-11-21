@@ -15,8 +15,8 @@
   --teal: #0f7f74;
 
   /* the one blue for paths, kickers and small metadata */
-  --path: var(--path);
-  --label: var(--label);
+  --path: #24618a;
+  --label: #1d6280;
 
   --line: rgba(20, 90, 130, .16);
   --line-soft: rgba(20, 90, 130, .1);
