@@ -53,6 +53,9 @@ PROJECTS = [
     ("mx-lab", "/mx-lab/", "MX Lab", "seven seasons of motocross, measured"),
     ("motobuzz", "/motobuzz/", "MotoBuzz", "what the motocross world is talking about"),
     ("saf-explorer", "/saf-explorer/", "SAF Explorer", "a standalone viewer for the .saf format"),
+    ("why-lang", "/why-lang/", "Why", "a page language where one .why file is one URL"),
+    ("whyx", "https://whyx-sxzp.onrender.com/", "whyx", "an X clone built from Why pages, one file per URL"),
+    ("tadc", "/tadc/", "The Amazing Digital Circus", "a fan-made circus break room with thirty-three acts"),
 ]
 
 
