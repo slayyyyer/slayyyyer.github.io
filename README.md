@@ -1,8 +1,9 @@
 # slayyyyer.github.io
 
 A static personal site: the homepage, a `/projects/` collection page and an illustrated
-`/world/` map, all a bright, layered “Aqua” desktop with scroll and pointer parallax. Plain HTML,
-CSS and a small vanilla script — no dependencies and no build step. Raster art is limited to the
+`/world/` map, all one bright “Aqua” desktop — a single light source, one glass material, two
+radii and a little pointer parallax. Plain HTML, CSS and a small vanilla script — no dependencies
+and no build step. Raster art is limited to the
 share card `og.png` (1200×630), twenty 960×600 WebP stills under `projects/shots/`, and the favicon,
 touch icon and web-manifest icons in the root.
 
@@ -56,9 +57,10 @@ Notes:
 ## How the parallax works
 
 - Elements with `data-speed` get a CSS custom property `--par` from `assets/site.js`,
-  calculated as `scrollY × speed`, and their CSS transform consumes it. Background layers
-  use small positive speeds; the three hero panes use negative speeds so they separate as
-  you scroll.
+  calculated as `scrollY × speed`, and their CSS transform consumes it. Only the three hero
+  panes use it now (with small negative speeds, so they separate as you scroll) — the old
+  aurora, orb, bokeh and ring layers are gone, replaced by one fixed gradient and a single
+  caustic sweep.
 - Elements with `data-mouse` also get `--mx` / `--my` from the pointer position in the hero.
 - Everything is transform-only and updated in `requestAnimationFrame`, so scrolling stays
   off the layout path.
@@ -102,7 +104,7 @@ top still closes the arcade.
 | Project cards — the three featured on the homepage | `index.html`, `#projects` section |
 | Project cards — the full collection | `projects/index.html` |
 | Project card styling | `.projectcard` in `assets/site.css` |
-| Colours, glass, type, layout | `assets/site.css` (`:root` holds the palette) |
+| Colours, type, layout, the scene light | `assets/site.css` (`:root` holds the palette; `.scene__base` is the light) |
 | Parallax speeds | `data-speed` / `data-mouse` attributes in `index.html` |
 | Parallax and scroll-cue behaviour | `assets/site.js` |
 | World map, buildings and captions | `world/index.html` |
